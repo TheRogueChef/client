@@ -1,0 +1,363 @@
+.App {
+
+    background-image: url('../images/CoolPurp.jpg');
+    background-size: cover;
+    font-family: MorningBeach;
+    font-weight: bolder;
+    height: auto;
+    width: auto;
+
+}
+
+.pinpic {
+    width: 175px;
+    height: 175px;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.logo {
+    margin-left: 10px;
+    color: darkred;
+    display: flex;
+
+
+}
+
+/* chatbox */
+
+
+.chat-box__window {
+    width: 300px;
+    height: 200px;
+    overflow: auto;
+    border: 1px solid black;
+    font-family: Italic;
+}
+
+
+/*MusicPlayer*/
+.musicMain {
+    position: relative;
+    width: 300px;
+    height: 250px;
+    background-color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cassette {
+    position: relative;
+    width: 280px;
+    height: 150px;
+    background-color: #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cassette:before,
+.cassette:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #000;
+}
+
+.cassette:before {
+    left: 0;
+}
+
+.cassette:after {
+    right: 0;
+}
+
+.cassette .reels {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    height: calc(100% - 20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cassette .reel {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: #000;
+    border-radius: 50%;
+    margin: 0 10px;
+    overflow: hidden;
+}
+
+.cassette .reel:before,
+.cassette .reel:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #ccc;
+}
+
+.cassette .reel:before {
+    left: 0;
+}
+
+.cassette .reel:after {
+    right: 0;
+}
+
+.cassette .window {
+    position: relative;
+    width: 100px;
+    height: 120px;
+    background-color: #000;
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.cassette .window:before,
+.cassette .window:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+}
+
+.cassette .window:before {
+    left: -10px;
+}
+
+.cassette .window:after {
+    right: -10px;
+}
+
+.cassette .buttons {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cassette .buttons .button {
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.cassette .buttons .button:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    transform: translate(-50%, -50%);
+}
+
+.cassette .buttons .button.play:before {
+    width: 14px;
+    height: 14px;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 10px solid #ccc;
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.cassette .buttons .button.pause:before {
+    width: 6px;
+    height: 14px;
+    background-color: #ccc;
+    transform: translate(-50%, -50%);
+}
+
+.cassette .buttons .button.previous:before,
+.cassette .buttons .button.next:before {
+    width: 14px;
+    height: 14px;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 10px solid #ccc;
+    transform: translate(-50%, -50%);
+}
+
+.cassette .buttons .button.previous:before {
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.alert {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 5px 10px;
+    background-color: #ff0000;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.info {
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.info .artist {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.info .song {
+    margin-bottom: 0;
+}
+
+/* Main Page */
+.Main {
+    display: flex;
+    width: auto;
+}
+
+.MainLeft, .MainRight{
+    margin: 10px;
+}
+
+.MainMid {
+    width: 920px;
+}
+
+
+.btn {
+    width: 110px;
+    height: 30px;
+    background-color: rgb(164, 29, 164);
+    color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px black;
+}
+
+/*Bored*/
+.Bbtn {
+    width: 200px;
+    height: 60px;
+    background-color: rgb(164, 29, 164);
+    color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px black; 
+    font-size: 30px;
+}
+
+/*Dashboard*/
+.Dashboard {
+    padding-left: 75px;
+    padding-bottom: 20px;
+}
+
+/*LogReg*/
+.LRLeft {
+    display: flex;
+}
+
+.body {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+
+/*Login*/
+.logBox {
+    border: 1px solid black;
+    border-radius: 2%;
+    box-shadow: 3px 3px black;
+    width: 270px;
+    height: 370px;
+    background-color: rgba(0,0,0,.3);
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.regBox {
+    border: 1px solid black;
+    border-radius: 2%;
+    box-shadow: 3px 3px black;
+    width: 270px;
+    height: 680px;
+    background-color: rgba(0,0,0,.3);
+    color: aliceblue;
+    font-size: 20px;
+}
+
+/*E & E displayAll*/
+.diaryBtn {
+    margin-left: 100px;
+    width: 150px;
+    height: 40px;
+    background-color: purple;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 1px 1px;
+}
+
+.bodyBox {
+    background-image: 'transparent';
+    width: 100vw;
+    height: auto;
+    text-align: center;
+
+}
+
+.allBox {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,.2);
+    margin: 20px;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding-bottom: 10px;
+    
+}
+
+/* OnePageDisplay*/
+.oneBodyBox {
+    background-image: 'transparent';
+    width: 100vw;
+    height: 100vh;
+}
+
+.oneBox {
+    margin: 20px;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+/*NewEntry & Event*/
+.EBodyBox {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    text-align: center;
+}

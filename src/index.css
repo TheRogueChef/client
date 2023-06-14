@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "hellofortune";
+  src: local("hellofortune"),
+    url("./components/fonts/hellofortune.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "BoneyardBrawl-Regular";
+  src: local("BoneyardBrawl-Regular"),
+    url("./components/fonts/boneyard_brawl/BoneyardBrawl-Regular.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "CoffeeGreen";
+  src: local("CoffeeGreen"),
+    url("./components/fonts/coffee_green/CoffeeGreen.otf") format("opentype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "MorningBeach";
+  src: local("MorningBeach"),
+    url("./components/fonts/morning_beach/MorningBeach.ttf") format("truetype");
+  font-weight: bold;
+}
