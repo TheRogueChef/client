@@ -83,7 +83,7 @@ const UpdateEvent = (props) => {
                     value={eventDetails}
                     onChange={(e) => { setEventDetails(e.target.value) }} />
                 </p>
-                <div style={{ display: 'flex', justifyContent: 'center', marginLeft: "",}}>
+                <div style={{ display: 'flex', justifyContent: 'center'}}>
                     <input className='btn' type='submit'/>
                     <button style={{ marginLeft: '50px', marginRight: '50px'}} onClick={deleteEvent} className='btn-danger'>Delete</button>
                     <Link className='btn' to={'/Main'}>Home</Link>

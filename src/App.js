@@ -26,9 +26,7 @@ import FamilyUpdate from './components/tribes/families/FamilyUpdate';
 import CollageDisplayAll from './components/tribes/picPages/CollageDisplayAll';
 import CollageNew from './components/tribes/picPages/CollageNew';
 import CollageUpdate from './components/tribes/picPages/CollageUpdate';
-import FamPicDisplayAll from './components/tribes/picPages/FamPicDisplayAll';
-import FamPicNew from './components/tribes/picPages/FamPicNew';
-import PicDisplayAll from './components/tribes/picPages/PicDisplayAll';
+import AllPics from './components/tribes/picPages/AllPics';
 import PicNew from './components/tribes/picPages/PicNew';
 import SongApiRandom from './components/tribes/songs/SongApiRandom';
 import SongApiSearch from './components/tribes/songs/SongApiSearch';
@@ -68,17 +66,15 @@ function App() {
         <Route path="/updateFamily/:id" element={<FamilyUpdate />} />
         {/* <Route path="/allCollages" element={<CollageDisplayAll />} />
         <Route path="/newCollage" element={<CollageNew />} />
-        <Route path="/updateCollage/:id" element={<CollageUpdate />} />
-        <Route path="/fam-pics" element={<FamPicDisplayAll />} />
-        <Route path="/fam-pics-new" element={<FamPicNew />} />
-        <Route path="/pics" element={<PicDisplayAll />} />
-        <Route path="/pics-new" element={<PicNew />} /> */}
-        <Route path="/songs-random" element={<SongApiRandom />} />
+        <Route path="/updateCollage/:id" element={<CollageUpdate />} /> */}
+        <Route path="/allPics" element={<AllPics />} />
+        <Route path="/newPic" element={<PicNew />} />
+        {/* <Route path="/songs-random" element={<SongApiRandom />} />
         <Route path="/songs-search" element={<SongApiSearch />} />
         <Route path="/songs-form" element={<SongForm />} />
         <Route path="/songs" element={<DisplayAllSongs />} />
-        <Route path="/music-player" element={<MusicPlayer />} />
-        <Route path="/allEntries" element={<DisplayAllEntries />} />
+        <Route path="/music-player" element={<MusicPlayer />} /> */}
+
       </Routes>
     </div>
   );

@@ -25,28 +25,20 @@ const OneFamily = (props) => {
         };
     }, [id]);
 
-    const deleteFamily = (familyId) => {
-        axios.delete('http://localhost:8000/api/allFamilies/' + familyId)
-            .then(res => {
-                navigate('/Main')
-            })
-            .catch(err => console.log(err))
-    };
+
 
     return (
-        <div className='container4' style={{
-            backgroundImage: `transparent`
-        }}>
+        <div className='oneBodyBox'>
             <br /><br />
-            <Link className='btn4' to={`/Main`}>Home</Link>
-            <div className='details4'>
-                <h1 style={{ textDecoration: 'underline', fontWeight: 'bolder'}}>{family.familyTitle}</h1>
+            <div className='oneBox'>
+                <h1 style={{ textShadow: '2px 2px black', fontSize: '100px',  color:"darkRed"}}>----- {family.familyTitle} -----</h1>
                 <br />
-                <h3>{family.familyMembers}</h3>
+                <h1 style={{ textShadow: '1px 1px pink' }}>{family.familyMembers}</h1>
                 <br  />
-                <h3 style={{ fontFamily: 'cursive'}}>{family.familyStatement}</h3>
+                <h3 style={{ fontStyle: 'italic', textShadow: '1px 1px pink' }}>"{family.familyStatement}"</h3>
                 <br /><br />
-                <button onClick={(e) => { deleteFamily(family._id) }} className='btn3 btn-danger'>Delete</button>
+                <Link className='btn' to={`/Main`}>Home</Link>
+                
             </div>
         </div>
     )

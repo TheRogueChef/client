@@ -21,7 +21,7 @@ const EventForm = (props) => {
         axios.post('http://localhost:8000/api/newEvent', event)
             .then((res) => {
                 setEvent({...event, eventTitle:"", eventDate: Date, eventLocation: ""})
-                navigate('/')
+                navigate('/Main')
             })
             .catch((err) => {
                 setErrors(err)

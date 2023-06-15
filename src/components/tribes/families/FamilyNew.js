@@ -29,40 +29,38 @@ const FamilyForm = (props) => {
     }
 
     return (
-        <div className='container2'  style={{
-            backgroundImage: `transparent`} }>
-        <div className='details3'>
-            <form className='w-25' onSubmit={submitHandler}>
-                <h1 style={{ fontWeight: 'bolder', textDecoration: 'underline'}}>Create a New Family</h1>
+        <div className=''>
+        <div className='EBodyBox'>
+            <form  onSubmit={submitHandler}>
+                <h1 style={{textShadow: '2px 2px pink', fontSize: '100px'}}>--- Add a Family ---</h1>
 
-                <label className='form-label'>Family Title: </label>
-                <input className='form-control' type="text" onChange={handleInputChange} value={family.familyTitle} name='familyTitle' />
+                <label style={{ textShadow: '2px 2px pink', fontSize: '25px'}}>Family Title: </label>
+                <input type="text" onChange={handleInputChange} value={family.familyTitle} name='familyTitle' style={{ marginLeft: '5px', borderRadius: '5px', backgroundColor: 'transparent'}} />
                 {
                     errors.familyTitle?
                     <p className='text-danger'>{errors.familyTitle.message}</p>:
                     null
                 }
                 <br />
-                <label className='form-label'>Family Members: </label>
-                <input className='form-control' type="text" onChange={handleInputChange} value={family.familyMembers} name='familyMembers' />
+                <label style={{ textShadow: '2px 2px pink', fontSize: '25px'}}>Family Members: </label>
+                <input type="text" onChange={handleInputChange} value={family.familyMembers} name='familyMembers' style={{ marginLeft: '5px', borderRadius: '5px', backgroundColor: 'transparent'}} />
                 {
                     errors.tribeMembers?
                     <p className='text-danger'>{errors.tribeMembers.message}</p>:
                     null
                 }
                 <br />
-                <label className='form-label'>Family Statement: </label>
-                <input className='form-control' type="text" onChange={handleInputChange} value={family.familyStatement} name='familyStatement' />
+                <label style={{ textShadow: '2px 2px pink', fontSize: '25px'}}>Family Statement: </label><br/>
+                <textarea type="text" onChange={handleInputChange} value={family.familyStatement} name='familyStatement' style={{ width: '550px', height: '300px',marginLeft: '5px', borderRadius: '5px', backgroundColor: 'transparent', whiteSpace: 'pre-wrap', overflow: 'auto'}} />
                 {
                     errors.familyStatement?
                     <p className='text-danger'>{errors.familyStatement.message}</p>:
                     null
                 }
-                <br />
-                <button className='btn btn-success' >Create</button>
-            </form>
-            <br  /><br  />
+                <br /><br  />
+                <button style={{marginRight: '100px'}} className='btn' >Create</button>
                 <Link className='btn' to={'/Main'}>Home</Link>
+            </form>
         </div>
         </div>
     )

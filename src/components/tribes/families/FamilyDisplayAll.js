@@ -19,26 +19,25 @@ const DisplayAllFamilies = (props) => {
     }, []);
 
     return (
-        <div className='container' style={{ backgroundImage: 'transparent' }}>
-            <div style={{ display: 'flex'}}>
+        <div className='oneBodyBox'>
+            <div style={{ display: 'flex', justifyContent: 'space-evenly' }}> 
                 <Link className='btn' to={'/newFamily'} style={{ margin:'25px'}}>Add a Family</Link>
-                <h1>The Onion Tribe Families</h1> 
+                <h1 style={{ fontSize: '80px',  textShadow: '5px 5px pink'}} >--- The Onion Tribe Families ---</h1> 
                 <Link className='btn' to={'/Main'} style={{ margin:'25px'}}>Home</Link>
             </div>
             {familyList.map((family, index) => {
                 return (
-                    <div className='details' key={index} style={{ display: 'flex'}}>
-                        <h2 style={{ fontStyle: 'italic', paddingLeft: '5px', paddingRight: '5px' }}>{family.familyTitle}</h2>
-                        <h4 style={{ paddingTop: '17px', paddingLeft: '20px'}}>{family.familyMembers}</h4>
-                        <h4 style={{ paddingTop: '17px', paddingLeft: '20px'}}>{family.familyStatement}</h4>
+                    <div className='allBox' key={index} style={{ display: 'flex'}}>
+                        <h1 style={{ fontStyle: 'italic', paddingLeft: '5px', paddingRight: '5px',textShadow: '1px 1px pink'  }}>{family.familyTitle}</h1>
+                        <hr/>
+                        <h3 style={{ paddingTop: '4px',  textShadow: '1px 1px pink'}}>{family.familyMembers}</h3>
+                        <hr/>
+                        <h4 style={{ fontStyle: 'italic', paddingTop: '17px', textShadow: '1px 1px pink'}}>"{family.familyStatement}"</h4>
                         <br />
-                        <Link className='btn' to={`/updateFamily/${family._id}`} style={{}}>Edit page</Link>
+                        <Link className='btn' to={`/updateFamily/${family._id}`} style={{ marginLeft: '20px', marginTop: '20px'}}>Edit page</Link>
                         <br /><br />
-                        <Link className='btn2' to={`/oneFamily/${family._id}`} style={{}}>Show me this Family</Link>
+                        <Link className='btn' to={`/oneFamily/${family._id}`} style={{ marginLeft: '20px', marginTop: '20px', marginRight: '5px'}}>Fam Deets</Link>
                         <br /><br />
-                        
-                        
-                        
                     </div>
                 )
             })}

@@ -14,9 +14,9 @@ const Main = (props) => {
     
                 <Dashboard />
                 <br  />
-                <ChatBox/>
+                {/* <ChatBox/>
                 <br  />
-                <MusicPlayer />
+                <MusicPlayer /> */}
             </div>
             <div className= 'MainMid'>
 
