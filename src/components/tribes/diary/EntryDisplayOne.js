@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 
 const OneEntry = (props) => {
-    const navigate = useNavigate();
+
     const { id } = useParams();
     const [entry, setEntry] = useState({})
 
@@ -40,6 +40,8 @@ const OneEntry = (props) => {
             <br  /><br  />
             <h2 style={{  textShadow: '2px 2px pink', fontSize: '100px'}}>----- Say What? -----</h2>
             <Link className='btn' to={`/Main`}>Home</Link>
+            <br  /><br  />
+            <Link className='btn' to={`/allEntries`}>Back</Link>
             <br  /><br  />
             <div className='oneBox'>
                 <h1 style={{ borderStyle: 'double', width: 'auto', color:"darkRed", borderRadius: '5px'}}>{entry.entryTitle}</h1>

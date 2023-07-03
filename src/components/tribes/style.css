@@ -1,12 +1,10 @@
 .App {
-
     background-image: url('../images/CoolPurp.jpg');
     background-size: cover;
     font-family: MorningBeach;
     font-weight: bolder;
-    height: auto;
-    width: auto;
-
+    height: 100%;
+    width: 100%;
 }
 
 .pinpic {
@@ -20,227 +18,88 @@
     margin-left: 10px;
     color: darkred;
     display: flex;
-
-
 }
-
-/* chatbox */
-
-
-.chat-box__window {
-    width: 300px;
-    height: 200px;
-    overflow: auto;
-    border: 1px solid black;
-    font-family: Italic;
-}
-
 
 /*MusicPlayer*/
-.musicMain {
-    position: relative;
-    width: 300px;
-    height: 250px;
-    background-color: #000;
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.cassette {
-    position: relative;
-    width: 280px;
-    height: 150px;
-    background-color: #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.cassette:before,
-.cassette:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
+.component {
+    background-color: rgba(0, 0, 0, .2);
     width: 100%;
-    height: 10px;
-    background-color: #000;
-}
-
-.cassette:before {
-    left: 0;
-}
-
-.cassette:after {
-    right: 0;
-}
-
-.cassette .reels {
-    position: absolute;
-    top: 10px;
-    width: 100%;
-    height: calc(100% - 20px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.cassette .reel {
-    position: relative;
-    width: 60px;
-    height: 60px;
-    background-color: #000;
-    border-radius: 50%;
-    margin: 0 10px;
-    overflow: hidden;
-}
-
-.cassette .reel:before,
-.cassette .reel:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 10px;
-    background-color: #ccc;
-}
-
-.cassette .reel:before {
-    left: 0;
-}
-
-.cassette .reel:after {
-    right: 0;
-}
-
-.cassette .window {
-    position: relative;
-    width: 100px;
-    height: 120px;
-    background-color: #000;
-    margin: 0 auto;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.cassette .window:before,
-.cassette .window:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #ccc;
-}
-
-.cassette .window:before {
-    left: -10px;
-}
-
-.cassette .window:after {
-    right: -10px;
-}
-
-.cassette .buttons {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.cassette .buttons .button {
-    width: 30px;
-    height: 30px;
-    background-color: #000;
-    border-radius: 50%;
-    margin: 0 5px;
-}
-
-.cassette .buttons .button:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 10px;
-    height: 10px;
-    background-color: #ccc;
-    transform: translate(-50%, -50%);
-}
-
-.cassette .buttons .button.play:before {
-    width: 14px;
-    height: 14px;
-    border-top: 6px solid transparent;
-    border-bottom: 6px solid transparent;
-    border-left: 10px solid #ccc;
-    transform: translate(-50%, -50%) rotate(-90deg);
-}
-
-.cassette .buttons .button.pause:before {
-    width: 6px;
-    height: 14px;
-    background-color: #ccc;
-    transform: translate(-50%, -50%);
-}
-
-.cassette .buttons .button.previous:before,
-.cassette .buttons .button.next:before {
-    width: 14px;
-    height: 14px;
-    border-top: 7px solid transparent;
-    border-bottom: 7px solid transparent;
-    border-left: 10px solid #ccc;
-    transform: translate(-50%, -50%);
-}
-
-.cassette .buttons .button.previous:before {
-    transform: translate(-50%, -50%) rotate(180deg);
-}
-
-.alert {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    padding: 5px 10px;
-    background-color: #ff0000;
-    color: #fff;
-    font-size: 12px;
-    font-weight: bold;
-    border-radius: 5px;
-    z-index: 2;
-}
-
-.info {
+    height: 400px;
     text-align: center;
-    color: #fff;
-    font-size: 14px;
-    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
 }
 
-.info .artist {
-    font-weight: bold;
-    margin-bottom: 5px;
+.musicCover {
+    height: 100px;
+    width: 100px;
+    border-radius: 10%;
 }
 
-.info .song {
-    margin-bottom: 0;
+.playButton {
+    background: rgba(0, 0, 0, .4);
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px  2px black;
 }
+
+.subTitle {
+    margin-top: -1em;
+}
+
+.time {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    font-size: smaller;
+}
+
+.timeline {
+    width: 80%;
+    background-color: rgb(164, 29, 164);
+}
+
+input[type="range"] {
+    background-color: rgb(164, 29, 164);
+}
+
+
 
 /* Main Page */
 .Main {
     display: flex;
-    width: auto;
+    width: 100%;
+    height: 100%;
+
 }
 
-.MainLeft, .MainRight{
-    margin: 10px;
+.MainLeft {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: 10px;
+    width: 475px;
+}
+
+
+
+.MainRight {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: auto;
+    width: 475px;
 }
 
 .MainMid {
-    width: 920px;
+    width: auto;
+    margin-left: auto;
+
+    margin-right: auto;
 }
 
 
@@ -262,14 +121,40 @@
     color: whitesmoke;
     border: 1px solid black;
     border-radius: 10px;
-    box-shadow: 2px 2px black; 
+    box-shadow: 2px 2px black;
     font-size: 30px;
 }
 
 /*Dashboard*/
 .Dashboard {
+    margin-top: 30px;
+    border: 1px solid black;
+    border-radius: 2%;
+    background-color: rgba(0, 0, 0, .2);
+    background-image: url('../images/pin.png');
+    background-size: 150px;
+    background-repeat: no-repeat;
+    background-position: 250px 35px;
+    display: flex;
+    padding-left: 10px;
+}
+
+
+.DashR {
     padding-left: 75px;
-    padding-bottom: 20px;
+    padding-right: 40px;
+    padding-top: 15px;
+}
+
+.Dbtn {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(164, 29, 164);
+    color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 50%;
+    box-shadow: 2px 2px black;
+    margin-left: 15px;
 }
 
 /*LogReg*/
@@ -291,7 +176,7 @@
     box-shadow: 3px 3px black;
     width: 270px;
     height: 370px;
-    background-color: rgba(0,0,0,.3);
+    background-color: rgba(0, 0, 0, .3);
     color: aliceblue;
     font-size: 20px;
 }
@@ -302,7 +187,7 @@
     box-shadow: 3px 3px black;
     width: 270px;
     height: 680px;
-    background-color: rgba(0,0,0,.3);
+    background-color: rgba(0, 0, 0, .3);
     color: aliceblue;
     font-size: 20px;
 }
@@ -321,22 +206,23 @@
 
 .bodyBox {
     background-image: 'transparent';
-    width: 100vw;
-    height: auto;
+    width: 100%;
+    height: 100%;
     text-align: center;
+    padding-bottom: 20px;
 
 }
 
 .allBox {
     border: 1px solid black;
     border-radius: 5px;
-    background-color: rgba(0,0,0,.2);
+    background-color: rgba(0, 0, 0, .2);
     margin: 20px;
     text-align: center;
     width: auto;
     height: auto;
     padding-bottom: 10px;
-    
+
 }
 
 /* OnePageDisplay*/
@@ -362,4 +248,33 @@
     text-align: center;
 }
 
-/* allFamilies*/
+/* allPics*/
+.original-image {
+    height: 400px;
+    width: 400px;
+}
+
+.thumbnail-image {
+    height: 50px;
+    width: 50px;
+}
+
+/*ChatBox*/
+.ChatBorder {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, .2);
+
+}
+
+.screen {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, .2);
+    padding-left: 5%;
+    color: aliceblue;
+    text-shadow: 2px 2px black;
+    font-size: large;
+    margin: 2%;
+
+}

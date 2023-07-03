@@ -31,7 +31,7 @@ const UpdateEvent = (props) => {
         })
             .then(res => {
                 console.log(res);
-                navigate('/Main');
+                navigate('/allEvents');
             })
             .catch(err => console.log(err))
     };

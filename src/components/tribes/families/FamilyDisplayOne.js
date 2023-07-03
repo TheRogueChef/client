@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 
 const OneFamily = (props) => {
-    const navigate = useNavigate();
+
     const { id } = useParams();
     const [family, setFamily] = useState({});
 
@@ -37,7 +37,7 @@ const OneFamily = (props) => {
                 <br  />
                 <h3 style={{ fontStyle: 'italic', textShadow: '1px 1px pink' }}>"{family.familyStatement}"</h3>
                 <br /><br />
-                <Link className='btn' to={`/Main`}>Home</Link>
+                <Link className='btn' to={`/allFamilies`}>Back</Link>
                 
             </div>
         </div>

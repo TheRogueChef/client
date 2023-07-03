@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 
 
 const Login = (props) => {
@@ -34,7 +34,7 @@ const Login = (props) => {
             <div className='logBox'>
                 <h2> Login</h2>
                 <br />
-                <form  onSubmit={loginHandler}>
+                <form onSubmit={loginHandler}>
                     <label>Email: </label>
                     <input  type='text' name='email' value={userLogin.email} onChange={changeHandler} style={{ marginLeft: '5px', borderRadius: '5px', backgroundColor: 'transparent'}} />
                     <br /><br />

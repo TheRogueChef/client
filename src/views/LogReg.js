@@ -22,7 +22,7 @@ const LogReg = (props) => {
                 <h3 style={{ marginTop: '68px', marginLeft: '15px', fontSize: "50px", textShadow: '2px 2px pink'}}>/noun/</h3>
                 <h4 style={{ marginTop: "74px", marginLeft: "15px", fontSize: '40px', textDecoration: 'italic', textShadow: '2px 2px pink'}}>
                 'a social division in a traditional society consisting of families or communities linked by social,
-                economic, religious, or blood ties, with a common culture and dialect, typically having a recognized leader.'</h4>
+                economic, religious, or blood ties, with a common culture and dialect.'</h4>
             </div>
             <br /><br />
         <div className='body'>

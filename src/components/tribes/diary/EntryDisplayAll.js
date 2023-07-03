@@ -1,27 +1,28 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style.css';
 
 const DisplayAllEntries = (props) => {
-    const { id } = useParams();
     const [entries, setEntries] = useState([]);
+    const initialLikes = {};
 
     const handleLike = (entryId, entryIndex) => {
         const audio = new Audio('/audio/Untitled.mp3');
         audio.play();
 
-        setEntries((prevEntries) => {
-            const updatedEntries = [...prevEntries];
-            const updatedEntry = { ...updatedEntries[entryIndex] };
-            updatedEntry.likes += 1;
-            updatedEntries[entryIndex] = updatedEntry;
-            return updatedEntries;
-        });
-
         axios
-            .post(`http://localhost:8000/api/likeEntry/${entryId}`)
+            .post(`http://localhost:8000/api/likeEntry`, { entryId })
+            .then(() => {
+                setEntries((prevEntries) => {
+                    const updatedEntries = [...prevEntries];
+                    const updatedEntry = { ...updatedEntries[entryIndex] };
+                    updatedEntry.likes += 1;
+                    updatedEntries[entryIndex] = updatedEntry;
+                    return updatedEntries;
+                });
+            })
             .catch((err) => {
                 console.log(err);
             });
@@ -32,10 +33,13 @@ const DisplayAllEntries = (props) => {
         axios
             .get('http://localhost:8000/api/allEntries')
             .then((res) => {
-                const initialEntries = res.data.map((entry) => ({
-                    ...entry,
-                    likes: entry.likes || 0,
-                }));
+                const initialEntries = res.data.map((entry) => {
+                    const likes = initialLikes[entry._id] || entry.likes || 0;
+                    return {
+                        ...entry,
+                        likes: likes,
+                    };
+                });
                 setEntries(initialEntries.reverse());
             })
             .catch((err) => {
@@ -50,6 +54,10 @@ const DisplayAllEntries = (props) => {
             <br />
             <Link className='btn' target='blank' to={'/Main'}>
                 Home
+            </Link>
+            <br /><br />
+            <Link className='btn' to={`/newEntry`}>
+                New Entry
             </Link>
             <br /><br />
             {entries.map((entry, index) => {

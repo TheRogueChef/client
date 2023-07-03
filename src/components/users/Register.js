@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Register = (props) => {
     const [errors, setErrors] = useState({})
@@ -25,20 +25,20 @@ const Register = (props) => {
                 navigate('/Main')
             })
             .catch((err) => {
-                setErrors(err.response.data)
-                console.log(err.response.data);
+                setErrors(err.response.data.error.errors)
+                console.log(err.response.data.error);
             })}
     
     return (
         <div className='container3' style={{
             backgroundImage:`transparent`
         }}>
-            <div className='regBox' >
+            <div className='regBox'>
             <form onSubmit={submitHandler}>
                 <h2>Register</h2>
                 <br  />
                 <div>
-                    <label>First Name:  </label>
+                    <label>First Name: </label>
                     <input type="text" onChange={changeHandler} value={user.firstName} name='firstName' style={{ marginLeft: '5px', borderRadius: '5px', backgroundColor: 'transparent'}} />
                     {
                     errors.firstName?
@@ -48,8 +48,8 @@ const Register = (props) => {
                 </div>
                 <br  />
                 <div>
-                    <label>Last Name:  </label>
-                    <input type="text" onChange={changeHandler} value={user.lastName} name='lastName' style={{ marginLeft: '5px', borderRadius: '5px', backgroundColor: 'transparent'}} />
+                    <label>Last Name: </label>
+                    <input type="text" onChange={changeHandler} value={user.lastName} name='lastName' style={{ marginLeft: '5px', borderRadius: '5px', backgroundColor: 'transparent'}}/>
                     {
                     errors.lastName?
                     <p className='text-danger'>{errors.lastName.message}</p>:
@@ -58,8 +58,8 @@ const Register = (props) => {
                 </div>
                 <br  />
                 <div>
-                    <label>Email:  </label>
-                    <input type="text" onChange={changeHandler} value={user.email} name='email' style={{ marginLeft: '5px', borderRadius: '5px', backgroundColor: 'transparent'}} />
+                    <label>Email: </label>
+                    <input type="text" onChange={changeHandler} value={user.email} name='email' style={{ marginLeft: '5px', borderRadius: '5px', backgroundColor: 'transparent'}}/>
                     {
                     errors.email?
                     <p className='text-danger'>{errors.email.message}</p>:
@@ -68,8 +68,8 @@ const Register = (props) => {
                 </div>
                 <br  />
                 <div>
-                    <label>Password:  </label>
-                    <input type="password" onChange={changeHandler} value={user.password} name='password' style={{ marginLeft: '5px', borderRadius: '5px', backgroundColor: 'transparent'}} />
+                    <label>Password: </label>
+                    <input type="password" onChange={changeHandler} value={user.password} name='password' style={{ marginLeft: '5px', borderRadius: '5px', backgroundColor: 'transparent'}}/>
                     {
                     errors.password?
                     <p className='text-danger'>{errors.password.message}</p>:
@@ -78,8 +78,8 @@ const Register = (props) => {
                 </div>
                 <br  />
                 <div>
-                    <label>Confirm Password:  </label>
-                    <input type="password" onChange={changeHandler} value={user.confirmPassword} name='confirmPassword' style={{ marginLeft: '5px', borderRadius: '5px', backgroundColor: 'transparent'}} />
+                    <label>Confirm Password: </label>
+                    <input type="password" onChange={changeHandler} value={user.confirmPassword} name='confirmPassword' style={{ marginLeft: '5px', borderRadius: '5px', backgroundColor: 'transparent'}}/>
                 </div>
                 <br  /> <br  />
                 <button className='Bbtn'>Register</button>

@@ -76,7 +76,7 @@ const UpdateFamily = (props) => {
                 <div style={{ display: 'flex', justifyContent: 'center'}}>
                     <input className='btn' type='submit'/>                   
                     <button style={{ marginLeft: '50px', marginRight: '50px'}} onClick={(e) => { deleteFamily(id) }} className='btn3 btn-danger'>Delete</button>
-                    <Link className='btn' to={'/Main'}>Home</Link>                  
+                    <Link className='btn' to={'/allFamilies'}>Back</Link>                  
                 </div>
             </form>
         </div>

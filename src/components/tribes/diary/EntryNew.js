@@ -24,7 +24,7 @@ const EntryForm = (props) => {
         axios.post('http://localhost:8000/api/newEntry', entry)
             .then((res) => {
                 setEntry({entryTitle:"", entryDate: "", entryAuthor: "", entry: ""})
-                navigate('/Main')
+                navigate('/allEntries')
             })
             .catch((err) => {
                 setErrors(err)

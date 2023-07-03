@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const DisplayAllEvents = (props) => {
-    const { id } = useParams();
     const [events, setEvents] = useState([]);
     const eventDate = new Date();
 
@@ -32,6 +31,10 @@ const DisplayAllEvents = (props) => {
             <br/>
             <Link className='btn' to={'/Main'}>Home</Link>
             <br  /><br  />
+            <Link className='btn' to={`/newEvent`}>
+                    New Event
+                </Link>
+                <br /><br />   
             {events.map((event, index) => (
                 <div className='allBox' key={index}>
                     <h1 style={{ textShadow: '1px 1px pink' }}>{event.eventTitle}</h1>

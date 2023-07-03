@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 
 const OneEvent = (props) => {
-    const navigate = useNavigate();
     const { id } = useParams();
     const [event, setEvent] = useState({});
 
@@ -44,8 +43,14 @@ const OneEvent = (props) => {
         }}>
             <br  /><br  />
             <h2 style={{  textShadow: '2px 2px pink', fontSize: '100px'}}>----- Peep This Event -----</h2>
+        <div style={{ display: 'flex', justifyContent: 'space-evenly', marginLeft: '10%'}}>
+            <Link className='btn' to={`/updateEvent/${event._id}`}>Edit</Link>
+                    <br /><br />
             <Link className='btn' to={`/Main`}>Home</Link>
             <br  /><br  />
+            <Link className='btn' to={`/allEvents`}>All Events</Link>
+            <br  /><br  />
+        </div>
             <div className='oneBox'>
                 <h1 style={{ borderStyle: 'double', width: 'auto', color:"darkRed", borderRadius: '5px'}}>{event.eventTitle}</h1>
                 <br />

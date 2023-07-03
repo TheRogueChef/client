@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 // import { Image } from 'react-bootstrap';
+// import pin from '../components/images/pin.png';
 
 
 const Dashboard = (props) => {
@@ -16,22 +17,39 @@ const Dashboard = (props) => {
             })
     }
     return (
-        <div style={{ border: '1px solid black', borderRadius: '2%', backgroundColor: 'rgba(0,0,0,.2' }}>
-            <h1 style={{ marginLeft: '20px', textShadow: '2px 2px pink'}}>My Tribe Tracker</h1>
-                <div className='Dashboard'>
+        <div className='Dashboard'>
+            <div>
+                <h1 style={{ marginTop: '-3px', fontSize: '100px', textShadow: '2px 2px pink' }}>My</h1>
+                <h1 style={{ marginTop: '-10px', fontSize: '100px', textShadow: '2px 2px pink' }}>Tribe</h1>
+                <h1 style={{ marginTop: '-15px', fontSize: '100px', textShadow: '2px 2px pink' }}>Tracker</h1>
+            </div>
+            <div className='DashR'>
                 <br />
-                <Link className='btn' target='blank' to={'/allFamilies'}>Our Families</Link>
-                <br /><br />        
-                <Link className='btn' target='blank' to={'/allPics'}>Tribe Photos</Link>
-                <br /><br/>
-                <Link className='btn' target='blank' to={'/TribeLink'}>TribeLink</Link>
-                <br /><br/>
-                <Link className='btn' target='blank' to={'/BoredApi'}>Bored?</Link>
-                <br /><br/>
-                <Link className='btn' target='blank' to={'/settings'}>Settings</Link>
-                <br /><br/>
-                <button className='btn' onClick={logout}>Log out</button>
+                <div style={{ display: "flex", textShadow: '1px 1px pink' }}>
+                    <h4 style={{ marginRight: '5px' }}>Our Families</h4>
+                    <Link className='Dbtn' target='blank' to={'/allFamilies'}></Link>
                 </div>
+                <br />
+                <div style={{ display: "flex", textShadow: '1px 1px pink' }}>
+                    <h4>Tribe Photos</h4>
+                    <Link className='Dbtn' target='blank' to={'/allPics'}></Link>
+                </div>
+                <br />
+                <div style={{ display: "flex", textShadow: '1px 1px pink' }}>
+                    <h4 style={{ marginRight: '45px' }}>Bored?</h4>
+                    <Link className='Dbtn' target='blank' to={'/BoredApi'}></Link>
+                </div>
+                <br />
+                <div style={{ display: "flex", textShadow: '1px 1px pink' }}>
+                    <h4 style={{ marginRight: '30px' }}>Settings</h4>
+                    <Link className='Dbtn' target='blank' to={'/settings'}></Link>
+                </div>
+                <br />
+                <div style={{ display: "flex", textShadow: '1px 1px pink' }}>
+                    <h4 style={{ marginRight: '42px' }}>Logout</h4>
+                    <button className='Dbtn' onClick={logout}></button>
+                </div>
+            </div>
         </div>
     )
 }

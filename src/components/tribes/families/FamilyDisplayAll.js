@@ -1,11 +1,11 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style.css'
 
 const DisplayAllFamilies = (props) => {
-    const { id } = useParams();
+
     const [familyList, setFamilyList] = useState([]);
 
     useEffect(() => {
@@ -22,7 +22,7 @@ const DisplayAllFamilies = (props) => {
         <div className='oneBodyBox'>
             <div style={{ display: 'flex', justifyContent: 'space-evenly' }}> 
                 <Link className='btn' to={'/newFamily'} style={{ margin:'25px'}}>Add a Family</Link>
-                <h1 style={{ fontSize: '80px',  textShadow: '5px 5px pink'}} >--- The Onion Tribe Families ---</h1> 
+                <h1 style={{ fontSize: '80px',  textShadow: '5px 5px pink'}} >---- The Tribe Families ----</h1> 
                 <Link className='btn' to={'/Main'} style={{ margin:'25px'}}>Home</Link>
             </div>
             {familyList.map((family, index) => {

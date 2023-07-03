@@ -59,7 +59,7 @@ const FamilyForm = (props) => {
                 }
                 <br /><br  />
                 <button style={{marginRight: '100px'}} className='btn' >Create</button>
-                <Link className='btn' to={'/Main'}>Home</Link>
+                <Link className='btn' to={'/allFamilies'}>Back</Link>
             </form>
         </div>
         </div>

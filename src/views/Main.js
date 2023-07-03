@@ -1,33 +1,37 @@
 import React from 'react';
 import '../components/tribes/style.css';
-import MusicPlayer from '../components/tribes/songs/MusicPlayer';
 import Dashboard from '../components/tribes/admin/Dashboard';
 import RecentEntries from '../components/tribes/diary/RecentEntries';
 import RecentEvents from '../components/tribes/events/RecentEvents';
 import ChatBox from '../components/tribes/chat/ChatBox';
+import MusicPlayer from '../components/tribes/music/MusicPlayer';
 
 const Main = (props) => {
 
-    return (
-        <div className= 'Main'>
-            <div className= 'MainLeft'>
-    
-                <Dashboard />
-                <br  />
-                {/* <ChatBox/>
-                <br  />
-                <MusicPlayer /> */}
-            </div>
-            <div className= 'MainMid'>
 
+
+    return (
+        <div className='Main'>
+            <div className='MainLeft'>
+                <br />
+                <RecentEvents />
+                <br />
+                <MusicPlayer />
             </div>
-            <div className= 'MainRight'>
-                <RecentEvents/>
-                <br  />
-                <RecentEntries/>
-                
+            <div className='MainMid'>
+                <Dashboard />
+            </div>
+            <div className='MainRight'>
+                <br />
+                <RecentEntries />
+                <br />
+                <ChatBox />
             </div>
         </div>
-    )
-}
+    );
+};
+
 export default Main;
+
+
+

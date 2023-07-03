@@ -29,32 +29,45 @@ const PicForm = (props) => {
         setImage(file);
     };
 
-    const submitHandler = (e) => {
+    const submitHandler = async (e) => {
         e.preventDefault();
+        console.log('pic:', pic);
+        console.log('image:', image);
     
         const formData = new FormData();
+        console.log('formData:', formData);
+
         formData.append('image', image);
-    
         const updatedPic = { ...pic }; 
         Object.entries(updatedPic).forEach(([key, value]) => {
             formData.append(key, value);
         });
-    
-        axios
-            .post('http://localhost:8000/api/newPic', formData)
-            .then((res) => {
-                setPic({ picTitle: '', picDate: Date, picLocation: '' });
-                setImage(null);
-                navigate('/allPics');
-            })
-            .catch((err) => {
-                console.log('Error:', err);
-                setErrors(err);
+
+        try {
+            console.log('Sending POST request...');
+
+            await axios.post('http://localhost:8000/api/newPic', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
             });
+            console.log('Form submitted successfully');
+            setPic({ picTitle: '', picDate: '', picLocation: '' });
+            setImage(null);
+            navigate('/allPics');
+        } catch (error) {
+            if (error.response) {
+                console.log('Error:', error.message);
+                console.log('Error:', error.response.data);
+                setErrors(error.response.data.error);
+            } else {
+                console.log('after the else')
+                console.log('Error:', error.message);
+                setErrors({ error: 'An error occurred' });
+            }
+        }
     };
     
-    
-
     return (
         <div className="EBodyBox">
             <form onSubmit={submitHandler}>
@@ -95,9 +108,13 @@ const PicForm = (props) => {
                     {image && <p style={{ border: '1px solid black', boxShadow: '2px 2px darkgrey', width: '200px', height: '30px', borderRadius: '5px', backgroundColor: 'transparent' }}>Selected image: {image.name}</p>}
                 </div>
                 <br /><br  />
-                <button style={{ marginRight: '100px' }} className="btn">
+                <button style={{ marginRight: '100px' }} className="btn" type="submit">
                     Post
                 </button>
+                <Link className="btn" to="/allPics">
+                    All Pics
+                </Link>
+                <br /><br  />
                 <Link className="btn" to="/Main">
                     Home
                 </Link>

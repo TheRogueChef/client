@@ -66,6 +66,10 @@ const EventForm = (props) => {
                 }
                 <br />
                 <button style={{marginRight: '100px'}} className='btn' >Post</button>
+                <Link className='btn' to={`/allEvents`}>
+                    All Events
+                </Link>
+                <br /><br />   
                 <Link className='btn' to={'/Main'}>Home</Link>
             </form>      
         </div>

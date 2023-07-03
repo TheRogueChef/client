@@ -25,7 +25,7 @@ const RecentEvents = () => {
 
     return (
         <div style={{ border: '1px solid black', borderRadius: '2%', backgroundColor: 'rgba(0,0,0,.2)' }}>
-            <div style={{ display:'flex', margin: "10px"}}>
+            <div style={{ display: 'flex', margin: "10px" }}>
                 <Link className='btn' to={`/allEvents`} >All Events</Link>
                 <h4 style={{ textAlign: 'center', fontWeight: 'bold', paddingLeft: '20px', paddingRight: '30px', fontSize: '50px', textShadow: '2px 2px pink' }}>Our Events</h4>
                 <Link className='btn' to={`/newEvent`} >New Event</Link>
@@ -35,8 +35,6 @@ const RecentEvents = () => {
                     <h3 style={{ textShadow: '1px 1px pink' }}>{event.eventTitle}</h3>
                     <h4 style={{ textShadow: '1px 1px pink' }}>{formattedDate} at {event.eventLocation}</h4>
                     <Link className='btn' to={`/oneEvent/${event._id}`}>Deets</Link>
-                    <br /><br />
-                    <Link className='btn' to={`/updateEvent/${event._id}`}>Edit</Link>
                     <br /><br />
                     <p>************************************************************</p>
                 </div>
