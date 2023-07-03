@@ -54,7 +54,7 @@ const PicForm = (props) => {
             console.log('Form submitted successfully');
             setPic({ picTitle: '', picDate: '', picLocation: '' });
             setImage(null);
-            navigate('/allPics');
+            navigate('/Main');
         } catch (error) {
             if (error.response) {
                 console.log('Error:', error.message);
@@ -111,10 +111,10 @@ const PicForm = (props) => {
                 <button style={{ marginRight: '100px' }} className="btn" type="submit">
                     Post
                 </button>
-                <Link className="btn" to="/allPics">
+                {/* <Link className="btn" to="/allPics">
                     All Pics
-                </Link>
-                <br /><br  />
+                </Link> */}
+                {/* <br /><br  /> */}
                 <Link className="btn" to="/Main">
                     Home
                 </Link>

@@ -39,9 +39,9 @@ const DisplayAllPics = (props) => {
     }));
 
     return (
-        <div className='bodyBox'>
+        <div className='PBodyBox'>
             <br />
-            <h1 style={{ fontSize: '100px', textShadow: '5px 5px pink' }}>----- Tribe Photos -----</h1>
+            <h1 style={{ fontSize: '80px', textShadow: '2px 2px pink' }}>Tribe Photos</h1>
             <br />
             <div
                 style={{
@@ -50,9 +50,9 @@ const DisplayAllPics = (props) => {
                     alignItems: 'center',
                 }}
             >
-                <Link className='btn' to={'/Main'}>
+                {/* <Link className='btn' to={'/Main'}>
                     Home
-                </Link>
+                </Link> */}
                 <br />
                 <br />
                 <Link className='btn' to={'/newPic'}>
@@ -60,7 +60,7 @@ const DisplayAllPics = (props) => {
                 </Link>
                 <br />
                 <br />
-                <button style={{ marginLeft: '50px', marginRight: '50px'}} onClick = {() => deletePic()} className='btn-danger'>Delete</button>
+                <button style={{ marginLeft: '50px', marginRight: '50px'}} onClick = {() => deletePic()} className='btn'>Delete</button>
             </div>
             <div style={{ marginTop: '20px'}}>    
             <ImageGallery items={images} />
