@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import useSound from "use-sound";
+import { Link } from 'react-router-dom';
 import TheCurse from "../songs/TheCurse/TheCurse.mp3";
 import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai";
 import { BiSkipNext, BiSkipPrevious } from "react-icons/bi";
@@ -68,25 +69,25 @@ const MusicPlayer = (props) => {
             </div>
             <div>
                 <button className="playButton">
-                    <IconContext.Provider value={{ size: "3em", color: "rgb(164, 29, 164)" }}>
+                    <IconContext.Provider value={{ size: "3em", color: "white" }}>
                         <BiSkipPrevious />
                     </IconContext.Provider>
                 </button>
                 {!isPlaying ? (
                     <button className="playButton" onClick={playingButton}>
-                        <IconContext.Provider value={{ size: "3em", color: "rgb(164, 29, 164)" }}>
+                        <IconContext.Provider value={{ size: "3em", color: "white" }}>
                             <AiFillPlayCircle />
                         </IconContext.Provider>
                     </button>
                 ) : (
                     <button className="playButton" onClick={playingButton}>
-                        <IconContext.Provider value={{ size: "3em", color: "rgb(164, 29, 164)" }}>
+                        <IconContext.Provider value={{ size: "3em", color: "white" }}>
                             <AiFillPauseCircle />
                         </IconContext.Provider>
                     </button>
                 )}
                 <button className="playButton">
-                    <IconContext.Provider value={{ size: "3em", color: "rgb(164, 29, 164)" }}>
+                    <IconContext.Provider value={{ size: "3em", color: "white" }}>
                         <BiSkipNext />
                     </IconContext.Provider>
                 </button>
@@ -112,6 +113,8 @@ const MusicPlayer = (props) => {
                     }}
                 />
             </div>
+                <br/>
+                <Link className='btn' to={`/newSong`}>Add A Song</Link>
         </div>
     );
 };

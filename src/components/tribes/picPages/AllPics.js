@@ -30,14 +30,17 @@ const DisplayAllPics = (props) => {
             .catch((err) => console.log(err));
     };
 
-    const images = pics.map((pic) => ({
-        original: pic.image? `http://localhost:8000/api/allPics/${pic._id}/image`: 'No Image Available' ,
-        thumbnail: pic.image? `http://localhost:8000/api/allPics/${pic._id}/image` : 'No Image Available',
-        description: `${pic.picTitle} - ${pic.picLocation} - ${pic.picDate} - ${pic.image}`,
-        originalClass: 'original-image',
-        thumbnailClass: 'thumbnail-image',
-    }));
+    // const images = pics.map((pic) => ({
+    //     original: pic.image? `http://localhost:8000/api/allPics/${pic._id}/image`: 'No Image Available' ,
+    //     thumbnail: pic.image? `http://localhost:8000/api/allPics/${pic._id}/image` : 'No Image Available',
+    //     description: `${pic.picTitle} - ${pic.picLocation} - ${pic.picDate} - ${pic.image}`,
+    //     originalClass: 'original-image',
+    //     thumbnailClass: 'thumbnail-image',
+    // }));
 
+    const images = [  {    original: 'https://picsum.photos/id/1018/1000/600/',    thumbnail: 'https://picsum.photos/id/1018/250/150/',  },  {    original: 'https://picsum.photos/id/1015/1000/600/',    thumbnail: 'https://picsum.photos/id/1015/250/150/',  },  {    original: 'https://picsum.photos/id/1019/1000/600/',    thumbnail: 'https://picsum.photos/id/1019/250/150/',  },];
+
+console.log(images)
     return (
         <div className='PBodyBox'>
             <br />

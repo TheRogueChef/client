@@ -28,18 +28,16 @@ const Login = (props) => {
 
 
     return (
-        <div style={{
-            backgroundImage: `transparent`
-        }}>
+        <div>
             <div className='logBox'>
                 <h2> Login</h2>
                 <br />
                 <form onSubmit={loginHandler}>
                     <label>Email: </label>
-                    <input  type='text' name='email' value={userLogin.email} onChange={changeHandler} style={{ marginLeft: '5px', borderRadius: '5px', backgroundColor: 'transparent'}} />
+                    <input  type='text' name='email' value={userLogin.email} onChange={changeHandler} style={{ backgroundColor: 'transparent'}} />
                     <br /><br />
                     <label>Password: </label>
-                    <input type='password' name='password' value={userLogin.password} onChange={changeHandler} style={{ marginLeft: '5px', borderRadius: '5px', backgroundColor: 'transparent'}} />
+                    <input type='password' name='password' value={userLogin.password} onChange={changeHandler} style={{ backgroundColor: 'transparent'}} />
                     <br /><br />
                     <button className='Bbtn'>Login</button>
                     <br /> <br />

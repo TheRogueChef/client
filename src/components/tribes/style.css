@@ -8,16 +8,50 @@
 }
 
 .pinpic {
-    width: 175px;
-    height: 175px;
-    margin-left: 50px;
-    margin-top: 30px;
+    width: 22rem;
+    height: 22rem;
+    margin-left: 6rem;
+    margin-top: 5rem;
 }
 
 .logo {
-    margin-left: 10px;
+    margin-left: 1rem;
     color: darkred;
     display: flex;
+}
+
+/*LogReg*/
+.LRTop {
+    display: flex;
+    text-shadow: .25rem .25rem pink;
+}
+
+.body {
+    text-align: center;
+    font-size: 12rem;
+    height: 100%;
+    text-shadow: .25rem .25rem pink;
+    margin: 1rem;
+}
+
+.LRBoxes {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+.logBox, .regBox {
+    border: .1rem solid black;
+    border-radius: 2%;
+    box-shadow: .25rem .25rem black;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    text-align: center;
+    font-size: 2.5rem;
+    text-shadow: .1rem .1rem pink;
+    margin: 1rem;
+    color: black;
 }
 
 /*MusicPlayer*/
@@ -35,6 +69,7 @@
     height: 100px;
     width: 100px;
     border-radius: 10%;
+    box-shadow: 2px  2px rgb(164, 29, 164);
 }
 
 .playButton {
@@ -42,7 +77,7 @@
     border: 1px solid black;
     align-items: center;
     justify-content: center;
-    box-shadow: 2px  2px black;
+    box-shadow: 2px  2px rgb(164, 29, 164);
 }
 
 .subTitle {
@@ -66,6 +101,8 @@
 input[type="range"] {
     background-color: rgb(164, 29, 164);
 }
+
+
 
 
 
@@ -157,40 +194,9 @@ input[type="range"] {
     margin-left: 15px;
 }
 
-/*LogReg*/
-.LRLeft {
-    display: flex;
-}
 
-.body {
-    display: flex;
-    text-align: center;
-    justify-content: space-evenly;
-    height: 100vh;
-}
 
-/*Login*/
-.logBox {
-    border: 1px solid black;
-    border-radius: 2%;
-    box-shadow: 3px 3px black;
-    width: 270px;
-    height: 370px;
-    background-color: rgba(0, 0, 0, .3);
-    color: aliceblue;
-    font-size: 20px;
-}
 
-.regBox {
-    border: 1px solid black;
-    border-radius: 2%;
-    box-shadow: 3px 3px black;
-    width: 270px;
-    height: 680px;
-    background-color: rgba(0, 0, 0, .3);
-    color: aliceblue;
-    font-size: 20px;
-}
 
 /*E & E displayAll*/
 .diaryBtn {

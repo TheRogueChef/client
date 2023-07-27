@@ -22,6 +22,8 @@ import FamilyNew from './components/tribes/families/FamilyNew';
 import FamilyUpdate from './components/tribes/families/FamilyUpdate';
 import AllPics from './components/tribes/picPages/AllPics';
 import PicNew from './components/tribes/picPages/PicNew';
+import SongNew from './components/tribes/music/SongForm';
+import AllSongs from './components/tribes/music/DisplayAllSongs';
 
 
 
@@ -49,6 +51,8 @@ function App() {
         <Route path="/updateFamily/:id" element={<FamilyUpdate />} />
         <Route path="/allPics" element={<AllPics />} />
         <Route path="/newPic" element={<PicNew />} />
+        <Route path="/newSong" element={<SongNew />} />
+        <Route path="/allSongs" element={<AllSongs />} />
       </Routes>
     </div>
   );
