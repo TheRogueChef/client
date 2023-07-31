@@ -9,8 +9,6 @@ import AllPics from '../components/tribes/picPages/AllPics';
 
 const Main = (props) => {
 
-
-
     return (
         <div className='Main'>
             <div className='MainLeft'>
@@ -20,11 +18,11 @@ const Main = (props) => {
                 <MusicPlayer />
             </div>
             <div className='MainMid'>
+                <br />
                 <Dashboard />
                 <br />
                 <AllPics />
-                </div>
-                
+            </div>
             <div className='MainRight'>
                 <br />
                 <RecentEntries />

@@ -103,7 +103,7 @@
 }
 
 .Mbtn{
-    width: 20rem;
+    width: auto;
     background-color: rgb(164, 29, 164);
     color: whitesmoke;
     border: .1em solid black;
@@ -273,7 +273,7 @@
 }
 
 .Gallery {
-    margin: 2%;
+    margin: 1%;
     border: .1rem solid black;
     border-radius: 2%;
 }
@@ -309,13 +309,19 @@
     color: aliceblue;
     text-shadow: .1rem .1rem black;
     font-size: large;
-    margin: 2%;
+    margin: 1%;
 }
 
-.ChatBox {
-    width: 95%;
+.MessageBox {
+    width: 96.5%;
     margin: 2%;
+    height: 3rem;
     border-radius: 5%;
     background-color: transparent;
     color: whitesmoke;
+}
+
+.NameBox {
+    background-color: transparent;
+    border-radius: 5%;
 }

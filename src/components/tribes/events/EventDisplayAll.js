@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import '../style.css';
 
 const DisplayAllEvents = (props) => {
     const [events, setEvents] = useState([]);
     const eventDate = new Date();
+    const initialLikes = {};
 
     const formattedDate = eventDate.toLocaleDateString('en-US', {
         month: 'short',
@@ -12,12 +14,38 @@ const DisplayAllEvents = (props) => {
         year: 'numeric',
     });
 
+    const handleLike = (eventId, eventIndex) => {
+        const audio = new Audio('/audio/Untitled.mp3');
+        audio.play();
+
+        axios
+            .post(`http://localhost:8000/api/likeEvent`, { eventId })
+            .then(() => {
+                setEvents((prevEvents) => {
+                    const updatedEvents = [...prevEvents];
+                    const updatedEvent = { ...updatedEvents[eventIndex] };
+                    updatedEvent.likes += 1;
+                    updatedEvents[eventIndex] = updatedEvent;
+                    return updatedEvents;
+                }); 
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    };
 
     useEffect(() => {
         axios
             .get('http://localhost:8000/api/allEvents')
             .then((res) => {
-                setEvents(res.data.reverse());
+                const initialEvents = res.data.map((event) => {
+                    const likes = initialLikes[event._id] || event.likes || 0;
+                    return {
+                        ...event,
+                        likes: likes,
+                    };
+                });
+                setEvents(initialEvents.reverse());
             })
             .catch((err) => {
                 console.log(err);
@@ -40,6 +68,13 @@ const DisplayAllEvents = (props) => {
                     <h2 style={{ fontStyle: 'italic'}}>"{event.eventDetails}"</h2>
                     <Link className='btn' to={`/oneEvent/${event._id}`}>Deets</Link>
                     <br /><br />
+                    <div className='LikeStrip'>
+                            Likes: {event.likes}
+                            <br />
+                            <button className='btn' onClick={() => handleLike(event._id, index)}>
+                                You Like That?
+                            </button>
+                        </div>
                 </div>
             ))}
         </div>

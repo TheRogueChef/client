@@ -58,7 +58,7 @@ const ChatBox = () => {
                         value={inputMessage}
                         onChange={(e) => setInputMessage(e.target.value)}
                         placeholder="Type your message"
-                        className='ChatBox'
+                        className='MessageBox'
                     />
                     <br/>
                     <div style={{ display: 'flex', justifyContent: 'space-evenly'}}>
@@ -67,7 +67,7 @@ const ChatBox = () => {
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
                             placeholder="Your Name"
-                            className='InputBox'
+                            className='NameBox'
                         />
                         <button className='btn' type="submit" >Post</button>
                     </div>

@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style.css';
 
 const DisplayAllEntries = (props) => {
@@ -52,13 +51,10 @@ const DisplayAllEntries = (props) => {
             <br />
             <p className= 'PageTitle'>----- Our Tribes Diary -----</p>
             <br />
-            <Link className='btn' target='blank' to={'/Main'}>
-                Home
-            </Link>
-            <br /><br />
-            <Link className='btn' to={`/newEntry`}>
-                New Entry
-            </Link>
+            <div className= 'ButtonStrip'>
+                <Link className='btn' target='blank' to={'/Main'}>Home</Link>
+                <Link className='btn' to={`/newEntry`}>New Entry</Link>
+            </div>
             <br /><br />
             {entries.map((entry, index) => {
                 let formattedDate = 'Invalid Date';
