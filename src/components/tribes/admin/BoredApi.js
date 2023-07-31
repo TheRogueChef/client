@@ -1,12 +1,10 @@
 import '../style.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const BoredApi = () => {
-
     const [activity, setActivity] = useState({});
-
     useEffect(() => {
         const fetchData = async () => {
             const options = {
@@ -23,7 +21,6 @@ const BoredApi = () => {
                 setActivity({ error: 'Error fetching data' });
             }
         };
-
         fetchData();
     }, []);
 
@@ -32,20 +29,19 @@ const BoredApi = () => {
     }
 
     return (
-        <div className="oneBodyBox" style={{ textAlign: "center", alignContent: "center" }}>
+        <div className="oneBodyBox">
             <div>
                 <br  />
-                <h1 style={{ textShadow: '2px 2px pink', fontSize: '100px', marginTop: '100px' }} name='activity'>
+                <p className= 'BoredBox' name='activity'>
                     So, if you're bored you should {activity.error ? activity.error : activity.activity}
-                </h1>
+                </p>
             </div>
             <br  />
             <br  />
-            <div style={{ display: 'flex', justifyContent: "space-evenly" }}> 
+            <div className= 'ButtonStrip'> 
                 <a href='/Main'>
                     <button className='Bbtn'>Home</button>
                 </a>
-                <br /><br />
                 <button className='Bbtn' onClick={refreshPage}>
                     Try Again
                 </button>

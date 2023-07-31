@@ -34,45 +34,52 @@ const EntryForm = (props) => {
     return (
         <div className='EBodyBox'>
             <form  onSubmit={submitHandler}>
-                <h1 style={{ fontWeight: 'bolder', textShadow: '2px 2px pink', fontSize: '100px'}}>----- Dear Diary -----</h1>
-                <label style={{ textShadow: '2px 2px pink', fontSize: '25px'}}>Post Title: </label>
-                <input type="text" onChange={handleInputChange} value={entry.entryTitle} name='entryTitle' style={{ marginLeft: '5px', borderRadius: '5px', backgroundColor: 'transparent'}}/>
-                <br />
-                {
-                    errors.entryTitle?
-                    <p className='text-danger'>{errors.entryTitle.message}</p>:
-                    null
-                }
-                <br />
-                <label style={{ textShadow: '2px 2px pink', fontSize: '25px'}}>Date: </label>
-                <input type="date" onChange={handleInputChange} value={entry.entryDate} name='entryDate' style={{ marginLeft: '5px', borderRadius: '5px', backgroundColor: 'transparent'}} />
-                <br />
-                {
-                    errors.entryDate?
-                    <p className='text-danger'>{errors.entryDate.message}</p>:
-                    null
-                }
-                <br />
-                <label style={{ textShadow: '2px 2px pink', fontSize: '25px'}}>Author: </label>
-                <input type="text" onChange={handleInputChange} value={entry.entryAuthor} name='entryAuthor' style={{ marginLeft: '5px', borderRadius: '5px', backgroundColor: 'transparent'}} />
-                <br />
-                {
-                    errors.entryAuthor?
-                    <p className='text-danger'>{errors.entryAuthor.message}</p>:
-                    null
-                }
-                <br />
-                <label style={{ textShadow: '2px 2px pink', fontSize: '25px'}}>Entry: </label>
-                <br/>
-                <textarea onChange={handleInputChange} value={entry.entry} name='entry' style={{ width: '550px', height: '300px',marginLeft: '5px', borderRadius: '5px', backgroundColor: 'transparent', whiteSpace: 'pre-wrap', overflow: 'auto'}} />
-                {
-                    errors.entry?
-                    <p className='text-danger'>{errors.entry.message}</p>:
-                    null
-                }
-                <br />
-                <button style={{marginRight: '100px'}} className='btn' >Post</button>
-                <Link className='btn' to={'/Main'}>Home</Link>
+                <p className= 'PageTitle'>----- Dear Diary -----</p>
+                <div className='ButtonStrip'>
+                    <button className='btn' >Post</button>
+                    <Link className='btn' to={'/Main'}>Home</Link>
+                </div>
+                <br /><br />
+                <div className= 'BoxLabel'>
+                    <label >Post Title: </label>
+                    <input type="text" onChange={handleInputChange} value={entry.entryTitle} name='entryTitle' className= 'InputBox' />
+                    <br />
+                    {
+                        errors.entryTitle?
+                        <p className='text-danger'>{errors.entryTitle.message}</p>:
+                        null
+                    }
+                    <br />
+                    <label >Date: </label>
+                    <input type="date" onChange={handleInputChange} value={entry.entryDate} name='entryDate' className= 'InputBox' />
+                    <br />
+                    {
+                        errors.entryDate?
+                        <p className='text-danger'>{errors.entryDate.message}</p>:
+                        null
+                    }
+                    <br />
+                    <label >Author: </label>
+                    <input type="text" onChange={handleInputChange} value={entry.entryAuthor} name='entryAuthor' className= 'InputBox' />
+                    <br />
+                    {
+                        errors.entryAuthor?
+                        <p className='text-danger'>{errors.entryAuthor.message}</p>:
+                        null
+                    }
+                    <br />
+                    <label >Entry: </label>
+                    <br/>
+                    <textarea onChange={handleInputChange} value={entry.entry} name='entry' className= 'EntryBox' />
+                    {
+                        errors.entry?
+                        <p className='text-danger'>{errors.entry.message}</p>:
+                        null
+                    }
+                    <br /><br />
+                </div>
+               
+                
             </form>
         </div>
     )

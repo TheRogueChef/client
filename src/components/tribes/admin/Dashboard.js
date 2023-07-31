@@ -3,7 +3,6 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 
 
-
 const Dashboard = (props) => {
     const navigate = useNavigate()
     const logout = () => {
@@ -17,37 +16,32 @@ const Dashboard = (props) => {
     }
     return (
         <div className='Dashboard'>
-            <div>
-                <h1 style={{ marginTop: '-3px', fontSize: '100px', textShadow: '2px 2px pink' }}>My</h1>
-                <h1 style={{ marginTop: '-10px', fontSize: '100px', textShadow: '2px 2px pink' }}>Tribe</h1>
-                <h1 style={{ marginTop: '-15px', fontSize: '100px', textShadow: '2px 2px pink' }}>Tracker</h1>
+            <div className='Logo'>
+                <p>My</p>
+                <p style={{ marginTop: '-.4em' }}>Tribe</p>
+                <p style={{ marginTop: '-.5em' }}>Tracker</p>
             </div>
             <div className='DashR'>
-                <br />
-                <div style={{ display: "flex", textShadow: '1px 1px pink' }}>
-                    <h3 style={{ marginRight: '0px', marginTop: '0px' }}>Families</h3>
-                    <Link className='Dbtn' target='blank' to={'/allFamilies'} style={{ marginLeft: '10px'}}></Link>
+
+                <div className='DashTab'>
+                    <p>Families</p>
+                    <Link className='Dbtn' target='blank' to={'/allFamilies'}></Link>
                 </div>
-                {/* <br />
-                <div style={{ display: "flex", textShadow: '1px 1px pink' }}>
-                    <h4>Tribe Photos</h4>
-                    <Link className='Dbtn' target='blank' to={'/allPics'}></Link>
-                </div> */}
-                <br /><br />
-                <div style={{ display: "flex", textShadow: '1px 1px pink' }}>
-                    <h3 style={{ marginRight: '0px', marginTop: '0px' }}>Bored?</h3>
+                <br />
+                <div className='DashTab'>
+                    <p>Bored?</p>
                     <Link className='Dbtn' target='blank' to={'/BoredApi'}></Link>
                 </div>
-                <br /><br />
-                <div style={{ display: "flex", textShadow: '1px 1px pink' }}>
-                    <h3 style={{ marginRight: '0px',  marginTop: "0px" }}>Settings</h3>
+                <br />
+                <div className='DashTab' >
+                    <p>Settings</p>
                     <Link className='Dbtn' target='blank' to={'/settings'} ></Link>
                 </div>
-                <br /><br />
-                <div style={{ display: "flex", textShadow: '1px 1px pink' }}>
-                    <h3 style={{ marginRight: '0px', marginTop: "0px" }}>Logout</h3>
+                <br />
+                <div className='DashTab'>
+                    <p>Logout</p>
                     <button className='Dbtn' onClick={logout} ></button>
-                    <br/><br/>
+                    <br />
                 </div>
             </div>
         </div>

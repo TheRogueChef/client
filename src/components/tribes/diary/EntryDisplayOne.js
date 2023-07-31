@@ -34,17 +34,15 @@ const OneEntry = (props) => {
 
 
     return (
-        <div className='oneBodyBox' style={{
-            textAlign: "center", alignContent: "center"
-        }}>
+        <div className='oneBodyBox' >
             <br  /><br  />
-            <h2 style={{  textShadow: '2px 2px pink', fontSize: '100px'}}>----- Say What? -----</h2>
-            <Link className='btn' to={`/Main`}>Home</Link>
-            <br  /><br  />
-            <Link className='btn' to={`/allEntries`}>Back</Link>
-            <br  /><br  />
+            <p className='PageTitle'>----- Say What? -----</p>
+            <div className='ButtonStrip'>
+                <Link className='btn' to={`/Main`}>Home</Link>
+                <Link className='btn' to={`/allEntries`}>Back</Link>
+            </div>
             <div className='oneBox'>
-                <h1 style={{ borderStyle: 'double', width: 'auto', color:"darkRed", borderRadius: '5px'}}>{entry.entryTitle}</h1>
+                <p className='TitleBox'>{entry.entryTitle}</p>
                 <br />
                 <h3 >{formatDate(entry.entryDate)} by {entry.entryAuthor}</h3>
                 <br  />

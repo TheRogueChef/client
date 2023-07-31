@@ -31,46 +31,70 @@ const EventForm = (props) => {
     return (
         <div className="EBodyBox">
             <form onSubmit={submitHandler}>
-                <h1 style={{  textShadow: '2px 2px pink', fontSize: '100px'}}>----- New Event -----</h1>
-                <label style={{ textShadow: '2px 2px pink', fontSize: '25px'}}>What's it called? </label>
-                <input type="text" onChange={handleInputChange} value={event.eventTitle} name='eventTitle' style={{ marginLeft: '5px', borderRadius: '5px', backgroundColor: 'transparent'}}/>
-                {
-                    errors.eventTitle?
-                    <p className='text-danger'>{errors.eventTitle.message}</p>:
-                    null
-                }
-                <br />
-                <label style={{ textShadow: '2px 2px pink', fontSize: '25px'}}>When is it? </label>
-                <input type="date" onChange={handleInputChange} value={event.eventDate} name='eventDate' style={{ marginLeft: '5px', borderRadius: '5px', backgroundColor: 'transparent'}}/>
-                {
-                    errors.eventDate?
-                    <p className='text-danger'>{errors.eventDate.message}</p>:
-                    null
-                }
-                <br />
-                <label style={{ textShadow: '2px 2px pink', fontSize: '25px'}}>Where is it?</label>
-                <input type="text" onChange={handleInputChange} value={event.eventLocation} name='eventLocation' style={{ marginLeft: '5px', borderRadius: '5px', backgroundColor: 'transparent'}}/>
-                {
-                    errors.eventLocation?
-                    <p className='text-danger'>{errors.eventLocation.message}</p>:
-                    null
-                }
-                <br />
-                <label style={{ textShadow: '2px 2px pink', fontSize: '25px'}}>Details:</label>
-                <br  />
-                <textarea type="text" onChange={handleInputChange} value={event.eventDetails} name='eventDetails' style={{ width: '550px', height: '300px',marginLeft: '5px', borderRadius: '5px', backgroundColor: 'transparent', whiteSpace: 'pre-wrap', overflow: 'auto'}} />
-                {
-                    errors.eventDetails?
-                    <p className='text-danger'>{errors.eventDetails.message}</p>:
-                    null
-                }
-                <br />
-                <button style={{marginRight: '100px'}} className='btn' >Post</button>
-                <Link className='btn' to={`/allEvents`}>
-                    All Events
-                </Link>
-                <br /><br />   
-                <Link className='btn' to={'/Main'}>Home</Link>
+                <p className= 'PageTitle'>----- New Event -----</p>
+                <div className= 'ButtonStrip'>
+                    <button className='btn' >Post</button>
+                    <Link className='btn' to={`/allEvents`}>All Events</Link> 
+                    <Link className='btn' to={'/Main'}>Home</Link>
+                </div>
+                <br /><br />
+                <div className= 'BoxLabel'>
+                    <label>What's it called? </label>
+                    <input 
+                    type="text"
+                    onChange={handleInputChange} 
+                    value={event.eventTitle} name='eventTitle' 
+                    className= 'InputBox'/>
+                    <br />
+                    {
+                        errors.eventTitle?
+                        <p className='text-danger'>{errors.eventTitle.message}</p>:
+                        null
+                    }
+                    <br />
+                    <label>When is it? </label>
+                    <input 
+                    type="date" 
+                    onChange={handleInputChange} 
+                    value={event.eventDate} 
+                    name='eventDate' 
+                    className= 'InputBox'/>
+                    <br />
+                    {
+                        errors.eventDate?
+                        <p className='text-danger'>{errors.eventDate.message}</p>:
+                        null
+                    }
+                    <br />
+                    <label>Where is it?</label>
+                    <input 
+                    type="text" 
+                    onChange={handleInputChange} 
+                    value={event.eventLocation} 
+                    name='eventLocation' 
+                    className= 'InputBox'/>
+                    <br />
+                    {
+                        errors.eventLocation?
+                        <p className='text-danger'>{errors.eventLocation.message}</p>:
+                        null
+                    }
+                    <br />
+                    <label>Details:</label>
+                    <br  />
+                    <textarea 
+                    type="text" 
+                    onChange={handleInputChange} 
+                    value={event.eventDetails} 
+                    name='eventDetails' 
+                    className= 'EntryBox' />
+                    {
+                        errors.eventDetails?
+                        <p className='text-danger'>{errors.eventDetails.message}</p>:
+                        null
+                    }
+                    <br />
+                </div>
             </form>      
         </div>
     )

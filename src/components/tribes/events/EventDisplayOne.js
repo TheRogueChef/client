@@ -39,20 +39,17 @@ const OneEvent = (props) => {
 
 
     return (
-        <div className='oneBodyBox'  style={{ textAlign: "center", alignContent: "center"
-        }}>
+        <div className='oneBodyBox'>
             <br  /><br  />
-            <h2 style={{  textShadow: '2px 2px pink', fontSize: '100px'}}>----- Peep This Event -----</h2>
-        <div style={{ display: 'flex', justifyContent: 'space-evenly', marginLeft: '10%'}}>
+            <p className='PageTitle'>----- Peep This Event -----</p>
+        <div className='ButtonStrip'>
             <Link className='btn' to={`/updateEvent/${event._id}`}>Edit</Link>
-                    <br /><br />
             <Link className='btn' to={`/Main`}>Home</Link>
-            <br  /><br  />
             <Link className='btn' to={`/allEvents`}>All Events</Link>
-            <br  /><br  />
         </div>
             <div className='oneBox'>
-                <h1 style={{ borderStyle: 'double', width: 'auto', color:"darkRed", borderRadius: '5px'}}>{event.eventTitle}</h1>
+                <br />
+                <p className= 'TitleBox'>{event.eventTitle}</p>
                 <br />
                 <h3>{formatDate(event.eventDate)} at {event.eventLocation}</h3>
                 <br  />

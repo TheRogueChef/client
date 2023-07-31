@@ -27,22 +27,18 @@ const DisplayAllEvents = (props) => {
     return (
         <div className= 'bodyBox'>
             <br  />
-            <h1 style={{ fontSize: '100px',  textShadow: '5px 5px pink'}}>----- All Events -----</h1>
+            <h1 className='PageTitle'>----- All Events -----</h1>
             <br/>
-            <Link className='btn' to={'/Main'}>Home</Link>
-            <br  /><br  />
-            <Link className='btn' to={`/newEvent`}>
-                    New Event
-                </Link>
-                <br /><br />   
+            <div className='ButtonStrip'>
+                <Link className='btn' to={'/Main'}>Home</Link>
+                <Link className='btn' to={`/newEvent`}>New Event</Link>
+            </div>  
             {events.map((event, index) => (
                 <div className='allBox' key={index}>
-                    <h1 style={{ textShadow: '1px 1px pink' }}>{event.eventTitle}</h1>
-                    <h4 style={{ textShadow: '1px 1px pink' }}>{formattedDate} at {event.eventLocation}</h4>
-                    <h2 style={{ fontStyle: 'italic', textShadow: '1px 1px pink'}}>"{event.eventDetails}"</h2>
+                    <h1>{event.eventTitle}</h1>
+                    <h4>{formattedDate} at {event.eventLocation}</h4>
+                    <h2 style={{ fontStyle: 'italic'}}>"{event.eventDetails}"</h2>
                     <Link className='btn' to={`/oneEvent/${event._id}`}>Deets</Link>
-
-                    
                     <br /><br />
                 </div>
             ))}

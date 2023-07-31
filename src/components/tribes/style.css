@@ -5,6 +5,7 @@
     font-weight: bolder;
     height: 100%;
     width: 100%;
+    color: black;
 }
 
 .pinpic {
@@ -19,6 +20,12 @@
     color: darkred;
     display: flex;
 }
+
+.PageTitle {
+    font-size: 10rem;
+    text-shadow: .2rem .2rem pink;
+}
+
 
 /*LogReg*/
 .LRTop {
@@ -60,186 +67,255 @@
     display: flex;
     width: 100%;
     height: 100%;
-
+    padding: 1em;
 }
 
-.MainLeft {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: auto;
-    margin-right: 10px;
-    width: 475px;
-}
-
-
-
-.MainRight {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    margin-right: auto;
-    width: 475px;
+.MainLeft, .MainRight {
+    width: 30%;
 }
 
 .MainMid {
-    width: auto;
+    width: 35%;
     margin-left: auto;
     margin-right: auto;
 }
 
-
 .btn {
-    width: 110px;
-    height: 30px;
+    width: auto;
+    height: 2.25em;
     background-color: rgb(164, 29, 164);
     color: whitesmoke;
-    border: 1px solid black;
-    border-radius: 10px;
-    box-shadow: 2px 2px black;
+    border: .1rem solid black;
+    border-radius: 5%;
+    box-shadow: .2em .2em black;
+    text-shadow: 0 0 transparent;
 }
+
+
+/*MusicPlayer*/
+.MShell {
+    border: .1em solid black;
+    border-radius: 2%;
+    background-color: rgba(0, 0, 0, .2);
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+
+.Mbtn{
+    width: 20rem;
+    background-color: rgb(164, 29, 164);
+    color: whitesmoke;
+    border: .1em solid black;
+    border-radius: 5%;
+    box-shadow: .2em .2em black;
+    text-align: center;
+    margin: 1em;
+}
+
 
 /*Bored*/
+.BoredBox {
+    font-size: 10rem;
+    text-shadow: .2rem .2rem pink;
+    margin: 2%;
+}
+
 .Bbtn {
-    width: 200px;
-    height: 60px;
+    width: 20rem;
+    height: 5rem;
     background-color: rgb(164, 29, 164);
     color: whitesmoke;
-    border: 1px solid black;
-    border-radius: 10px;
-    box-shadow: 2px 2px black;
-    font-size: 30px;
+    border: .1rem solid black;
+    border-radius: 5%;
+    box-shadow: .2em .2em black;
+    font-size: 3rem;
 }
+
 
 /*Dashboard*/
 .Dashboard {
-    margin-top: 30px;
-    border: 1px solid black;
+    border: .1rem solid black;
     border-radius: 2%;
     background-color: rgba(0, 0, 0, .2);
     background-image: url('../images/pin.png');
-    background-size: 150px;
+    background-size: 18rem;
     background-repeat: no-repeat;
-    background-position: 250px 35px;
+    background-position: 16em 2em;
     display: flex;
-    padding-left: 10px;
+    padding: 2.5%;
 }
 
+.Logo{
+    font-size: 8.5rem;
+    text-shadow: .25rem .25rem pink;
+}
 
 .DashR {
-    padding-left: 50px;
-    padding-right: 30px; 
+    padding-left: 2.5em;
+    font-size: 2.5rem;
+    text-shadow: .1rem .1rem pink;
+}
 
-
+.DashTab {
+    display: flex;
+    justify-content: space-between;
 }
 
 .Dbtn {
-    width: 30px;
-    height: 30px;
+    width: 2em;
+    height: 2em;
     background-color: rgb(164, 29, 164);
     color: whitesmoke;
-    border: 1px solid black;
+    border: .1em solid black;
     border-radius: 50%;
-    box-shadow: 2px 2px black;
-    margin-left: 15px;
+    box-shadow: .2em .2em black;
 }
-
-
-
 
 
 /*E & E displayAll*/
-.diaryBtn {
-    margin-left: 100px;
-    width: 150px;
-    height: 40px;
-    background-color: purple;
-    color: black;
-    border: 1px solid black;
-    border-radius: 5px;
-    box-shadow: 1px 1px;
-}
-
 .bodyBox {
     background-image: 'transparent';
     width: 100%;
     height: 100%;
     text-align: center;
-    padding-bottom: 20px;
+    padding-bottom: 2%;
+}
 
+.LikeStrip {
+    font-size: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    text-shadow: .2rem .2rem pink;
 }
 
 .allBox {
-    border: 1px solid black;
-    border-radius: 5px;
+    border: .1rem solid black;
+    border-radius: 1%;
     background-color: rgba(0, 0, 0, .2);
-    margin: 20px;
+    margin: 2%;
     text-align: center;
     width: auto;
     height: auto;
-    padding-bottom: 10px;
-
+    padding-bottom: 1%;
+    text-shadow: .1em .1em pink;
 }
+
 
 /* OnePageDisplay*/
 .oneBodyBox {
     background-image: 'transparent';
-    width: 100vw;
+    width: 100%;
     height: 100vh;
+    text-align: center;
+    align-content: center;
+}
+
+.ButtonStrip {
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.TitleBox {
+    font-size: 6rem;
+    color: darkred;
+    text-shadow: .1rem .1rem black;
 }
 
 .oneBox {
-    margin: 20px;
+    margin: 5rem;
     text-align: center;
     width: auto;
     height: auto;
-    padding-bottom: 10px;
+    justify-content: center;
 }
+
 
 /*NewEntry & Event*/
 .EBodyBox {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: grid;
     text-align: center;
 }
 
+.BoxLabel {
+    font-size: 4rem;
+    text-shadow: .2rem .2rem pink;
+}
+
+.InputBox {
+    background-color: transparent;
+    border-radius: 2%;
+    margin-left: 1%;
+}
+
+.EntryBox {
+    width: 80%;
+    height: 100%;
+    border-radius: 2rem; 
+    background-color: transparent; 
+    white-space: pre-wrap;
+    overflow: auto
+}
+
+
 /* allPics*/
 .PBodyBox {
-    border: 1px solid black;
+    border: .1rem solid black;
     border-radius: 2%;
     text-align: center;
     width: auto;
     height: auto;
     background-color: rgba(0, 0, 0, .2);
-
-
+    padding-top: 2%;
 }
+
+.Gallery {
+    margin: 2%;
+    border: .1rem solid black;
+    border-radius: 2%;
+}
+
+.PicTitle {
+    font-size: 6rem;
+    text-shadow: .2rem .2rem pink;
+}
+
 .original-image {
-    height: 400px;
-    width: 400px;
+    height: 50rem;
+    width: 50rem;
 }
 
 .thumbnail-image {
-    height: 50px;
-    width: 50px;
+    height: 5rem;
+    width: 5rem;
 }
+
 
 /*ChatBox*/
 .ChatBorder {
-    border: 1px solid black;
-    border-radius: 5px;
+    border: .1rem solid black;
+    border-radius: 2%;
     background-color: rgba(0, 0, 0, .2);
-
 }
 
 .screen {
-    border: 1px solid black;
-    border-radius: 5px;
+    border: .1rem solid black;
+    border-radius: 2%;
     background-color: rgba(0, 0, 0, .2);
     padding-left: 5%;
     color: aliceblue;
-    text-shadow: 2px 2px black;
+    text-shadow: .1rem .1rem black;
     font-size: large;
     margin: 2%;
+}
 
+.ChatBox {
+    width: 95%;
+    margin: 2%;
+    border-radius: 5%;
+    background-color: transparent;
+    color: whitesmoke;
 }

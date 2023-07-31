@@ -24,33 +24,30 @@ import AllPics from './components/tribes/picPages/AllPics';
 import PicNew from './components/tribes/picPages/PicNew';
 
 
-
-
-
 function App() {
   return (
     <div className="App">
-      <Routes>
-        <Route path='/' element={<LogReg />} default/> 
-        <Route path="/Main" element={<Main />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/BoredApi" element={<BoredApi />} />
-        <Route path="/allChats" element={<ChatBox />} />
-        <Route path="/allEntries" element={<EntryDisplayAll />} />
-        <Route path="/oneEntry/:id" element={<EntryDisplayOne />} />
-        <Route path="/newEntry" element={<EntryNew />} />
-        <Route path="/allEvents" element={<EventDisplayAll />} />
-        <Route path="/oneEvent/:id" element={<EventDisplayOne />} />
-        <Route path="/newEvent" element={<EventNew />} />
-        <Route path="/updateEvent/:id" element={<EventUpdate />} />
-        <Route path="/allFamilies" element={<FamilyDisplayAll />} />
-        <Route path="/oneFamily/:id" element={<FamilyDisplayOne />} />
-        <Route path="/newFamily" element={<FamilyNew />} />
-        <Route path="/updateFamily/:id" element={<FamilyUpdate />} />
-        <Route path="/allPics" element={<AllPics />} />
-        <Route path="/newPic" element={<PicNew />} />
-      </Routes>
+        <Routes>
+          <Route path='/' element={<LogReg />} default/> 
+          <Route path="/Main" element={<Main />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/BoredApi" element={<BoredApi />} />
+          <Route path="/allChats" element={<ChatBox />} />
+          <Route path="/allEntries" element={<EntryDisplayAll />} />
+          <Route path="/oneEntry/:id" element={<EntryDisplayOne />} />
+          <Route path="/newEntry" element={<EntryNew />} />
+          <Route path="/allEvents" element={<EventDisplayAll />} />
+          <Route path="/oneEvent/:id" element={<EventDisplayOne />} />
+          <Route path="/newEvent" element={<EventNew />} />
+          <Route path="/updateEvent/:id" element={<EventUpdate />} />
+          <Route path="/allFamilies" element={<FamilyDisplayAll />} />
+          <Route path="/oneFamily/:id" element={<FamilyDisplayOne />} />
+          <Route path="/newFamily" element={<FamilyNew />} />
+          <Route path="/updateFamily/:id" element={<FamilyUpdate />} />
+          <Route path="/allPics" element={<AllPics />} />
+          <Route path="/newPic" element={<PicNew />} />
+        </Routes>
     </div>
   );
 }

@@ -50,7 +50,7 @@ const DisplayAllEntries = (props) => {
     return (
         <div className='bodyBox'>
             <br />
-            <h1 style={{ fontSize: '100px', textShadow: '5px 5px pink' }}>----- Our Tribes Diary -----</h1>
+            <p className= 'PageTitle'>----- Our Tribes Diary -----</p>
             <br />
             <Link className='btn' target='blank' to={'/Main'}>
                 Home
@@ -76,17 +76,17 @@ const DisplayAllEntries = (props) => {
                 }
                 return (
                     <div className='allBox' key={index}>
-                        <h1 style={{ textShadow: '1px 1px pink' }}>{entry.entryTitle}</h1>
-                        <h4 style={{ textShadow: '1px 1px pink' }}>
+                        <h1>{entry.entryTitle}</h1>
+                        <h4 >
                             {formattedDate} by {entry.entryAuthor}
                         </h4>
-                        <h2 style={{ fontStyle: 'italic', textShadow: '1px 1px pink' }}>"{entry.entry}"</h2>
+                        <h2 style={{ fontStyle: 'italic' }}>"{entry.entry}"</h2>
                         <br /><br />
                         <Link className='btn' to={`/oneEntry/${entry._id}`}>
                             Deets
                         </Link>
                         <br /><br />
-                        <div style={{ fontSize: '25px', display: 'flex', marginLeft: '20px', justifyContent: 'space-evenly', textShadow: '1px 1px pink' }}>
+                        <div className='LikeStrip'>
                             Likes: {entry.likes}
                             <br />
                             <button className='btn' onClick={() => handleLike(entry._id, index)}>

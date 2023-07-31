@@ -22,7 +22,7 @@ const PicForm = (props) => {
             setPic({ ...pic, [name]: value });
         }
     };
-    
+
 
     const handleImageChange = (e) => {
         const file = e.target.files[0];
@@ -33,12 +33,12 @@ const PicForm = (props) => {
         e.preventDefault();
         console.log('pic:', pic);
         console.log('image:', image);
-    
+
         const formData = new FormData();
         console.log('formData:', formData);
 
         formData.append('image', image);
-        const updatedPic = { ...pic }; 
+        const updatedPic = { ...pic };
         Object.entries(updatedPic).forEach(([key, value]) => {
             formData.append(key, value);
         });
@@ -67,57 +67,55 @@ const PicForm = (props) => {
             }
         }
     };
-    
+
     return (
         <div className="EBodyBox">
             <form onSubmit={submitHandler}>
-                <h1 style={{ textShadow: '2px 2px pink', fontSize: '100px' }}>----- Add a Pic -----</h1>
-                <label style={{ textShadow: '2px 2px pink', fontSize: '25px' }}>Pic Title </label>
-                <input
-                    type="text"
-                    onChange={handleInputChange}
-                    value={pic.picTitle}
-                    name="picTitle"
-                    style={{ marginLeft: '5px', borderRadius: '5px', backgroundColor: 'transparent' }}
-                />
-                {errors.picTitle ? <p className="text-danger">{errors.picTitle.message}</p> : null}
-                <br />
-                <label style={{ textShadow: '2px 2px pink', fontSize: '25px' }}>Snapped When? </label>
-                <input
-                    type="date"
-                    onChange={handleInputChange}
-                    value={pic.picDate}
-                    name="picDate"
-                    style={{ marginLeft: '5px', borderRadius: '5px', backgroundColor: 'transparent' }}
-                />
-                {errors.picDate ? <p className="text-danger">{errors.picDate.message}</p> : null}
-                <br />
-                <label style={{ textShadow: '2px 2px pink', fontSize: '25px' }}>Where is it?</label>
-                <input
-                    type="text"
-                    onChange={handleInputChange}
-                    value={pic.picLocation}
-                    name="picLocation"
-                    style={{ marginLeft: '5px', borderRadius: '5px', backgroundColor: 'transparent' }}
-                />
-                {errors.picLocation ? <p className="text-danger">{errors.picLocation.message}</p> : null}
-                <br />
-                <label style={{ textShadow: '2px 2px pink', fontSize: '25px' }}>Add Image:</label>
-                <div style={{ display: 'flex', justifyContent: 'space-evenly' }}> 
-                    <input  type="file" onChange={handleImageChange} accept="image/*" />
-                    {image && <p style={{ border: '1px solid black', boxShadow: '2px 2px darkgrey', width: '200px', height: '30px', borderRadius: '5px', backgroundColor: 'transparent' }}>Selected image: {image.name}</p>}
+                <p className="PageTitle">----- Add a Pic -----</p>
+                <div className='ButtonStrip'>
+                    <button className="btn" type="submit">Post</button>
+                    <Link className="btn" to="/Main">Home</Link>
                 </div>
-                <br /><br  />
-                <button style={{ marginRight: '100px' }} className="btn" type="submit">
-                    Post
-                </button>
-                {/* <Link className="btn" to="/allPics">
-                    All Pics
-                </Link> */}
-                {/* <br /><br  /> */}
-                <Link className="btn" to="/Main">
-                    Home
-                </Link>
+                <br /><br />
+                <div className='BoxLabel'>
+                    <label>Pic Title </label>
+                    <input
+                        type="text"
+                        onChange={handleInputChange}
+                        value={pic.picTitle}
+                        name="picTitle"
+                        className="InputBox"
+                    />
+                    {errors.picTitle ? <p className="text-danger">{errors.picTitle.message}</p> : null}
+                    <br /><br />
+                    <label>Snapped When? </label>
+                    <input
+                        type="date"
+                        onChange={handleInputChange}
+                        value={pic.picDate}
+                        name="picDate"
+                        className="InputBox"
+                    />
+                    {errors.picDate ? <p className="text-danger">{errors.picDate.message}</p> : null}
+                    <br /><br />
+                    <label>Where was it taken?</label>
+                    <input
+                        type="text"
+                        onChange={handleInputChange}
+                        value={pic.picLocation}
+                        name="picLocation"
+                        className="InputBox"
+                    />
+                    {errors.picLocation ? <p className="text-danger">{errors.picLocation.message}</p> : null}
+                    <br /><br />
+                    <label>Add Your Pic:</label>
+                    <br />
+                    <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
+                        <input type="file" onChange={handleImageChange} accept="image/*" />
+                        {image && <p className="InputBox">Selected Pic: {image.name}</p>}
+                    </div>
+                    <br /><br />
+                </div>
             </form>
         </div>
     );

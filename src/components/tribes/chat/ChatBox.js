@@ -53,25 +53,27 @@ const ChatBox = () => {
             </div>
             <div>
                 <form onSubmit={handleMessageSubmit}>
-
                     <input
                         type="text"
                         value={inputMessage}
                         onChange={(e) => setInputMessage(e.target.value)}
                         placeholder="Type your message"
-                        style={{ width:'95%',marginLeft: '13px', marginBottom: '10px', borderRadius: '5px', backgroundColor: 'transparent', color: 'whitesmoke'}} 
+                        className='ChatBox'
                     />
                     <br/>
-                    <input
-                        type="text"
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
-                        placeholder="Your Name"
-                        style={{ width:'40%', marginLeft: '13px', marginRight: '115px', borderRadius: '5px', backgroundColor: 'transparent', color: 'whitesmoke'}} 
-                    />
-                    <button className='btn' type="submit" style={{ marginLeft: '20px', marginBottom: '5px'}}>Post</button>
+                    <div style={{ display: 'flex', justifyContent: 'space-evenly'}}>
+                        <input
+                            type="text"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                            placeholder="Your Name"
+                            className='InputBox'
+                        />
+                        <button className='btn' type="submit" >Post</button>
+                    </div>
                 </form>
             </div>
+            <br />
         </div>
     );
 };

@@ -43,29 +43,13 @@ const DisplayAllPics = (props) => {
 console.log(images)
     return (
         <div className='PBodyBox'>
-            <br />
-            <h1 style={{ fontSize: '80px', textShadow: '2px 2px pink' }}>Tribe Photos</h1>
-            <br />
-            <div
-                style={{
-                    display: 'flex',
-                    justifyContent: 'space-evenly',
-                    alignItems: 'center',
-                }}
-            >
-                {/* <Link className='btn' to={'/Main'}>
-                    Home
-                </Link> */}
-                <br />
-                <br />
-                <Link className='btn' to={'/newPic'}>
-                    Add a Pic
-                </Link>
-                <br />
-                <br />
-                <button style={{ marginLeft: '50px', marginRight: '50px'}} onClick = {() => deletePic()} className='btn'>Delete</button>
+            <p className= 'PicTitle'>Tribe Photos</p>
+            <div className= 'ButtonStrip'>
+                <Link className='btn' to={'/newPic'}>Add a Pic</Link>
+                <button className= 'btn' onClick = {() => deletePic()}>Delete</button>
             </div>
-            <div style={{ marginTop: '20px'}}>    
+            <br />
+            <div className= 'Gallery'>    
             <ImageGallery items={images} />
             </div>
         </div>
