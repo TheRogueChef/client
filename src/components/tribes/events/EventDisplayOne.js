@@ -42,10 +42,11 @@ const OneEvent = (props) => {
         <div className='oneBodyBox'>
             <br  /><br  />
             <p className='PageTitle'>----- Peep This Event -----</p>
+            <br  /><br  />
         <div className='ButtonStrip'>
-            <Link className='btn' to={`/updateEvent/${event._id}`}>Edit</Link>
-            <Link className='btn' to={`/Main`}>Home</Link>
-            <Link className='btn' to={`/allEvents`}>All Events</Link>
+            <Link className='onebtn' to={`/updateEvent/${event._id}`}>Edit</Link>
+            <Link className='onebtn' to={`/Main`}>Home</Link>
+            <Link className='onebtn' to={`/allEvents`}>All Events</Link>
         </div>
             <div className='oneBox'>
                 <br />

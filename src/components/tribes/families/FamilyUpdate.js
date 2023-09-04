@@ -47,9 +47,9 @@ const UpdateFamily = (props) => {
             <form onSubmit={updateFamily}>
                 <p className='PageTitle'>----- Update Family -----</p>
                 <div className='ButtonStrip'>
-                    <input className='btn' type='submit' />
-                    <button onClick={(e) => { deleteFamily(id) }} className='btn'>Delete</button>
-                    <Link className='btn' to={'/allFamilies'}>Back</Link>
+                    <input className='onebtn' type='submit' />
+                    <button onClick={(e) => { deleteFamily(id) }} className='onebtn'>Delete</button>
+                    <Link className='onebtn' to={'/allFamilies'}>Back</Link>
                 </div>
                 <br /><br />
                 <div className='BoxLabel'>

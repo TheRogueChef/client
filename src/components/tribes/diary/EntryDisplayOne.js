@@ -38,8 +38,8 @@ const OneEntry = (props) => {
             <br  /><br  />
             <p className='PageTitle'>----- Say What? -----</p>
             <div className='ButtonStrip'>
-                <Link className='btn' to={`/Main`}>Home</Link>
-                <Link className='btn' to={`/allEntries`}>Back</Link>
+                <Link className='onebtn' to={`/Main`}>Home</Link>
+                <Link className='onebtn' to={`/allEntries`}>Back</Link>
             </div>
             <div className='oneBox'>
                 <p className='TitleBox'>{entry.entryTitle}</p>

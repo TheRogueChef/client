@@ -50,13 +50,14 @@ const UpdateEvent = (props) => {
     return (
         <div className="EBodyBox">
             <form onSubmit={updateEvent}>
+            <br />
                 <p className="PageTitle">----- Update Event -----</p>
                 <div className="ButtonStrip">
-                    <input className="btn" type="submit" />
-                    <button onClick={deleteEvent} className="btn">
+                    <input className="onebtn" type="submit" />
+                    <button onClick={deleteEvent} className="onebtn">
                         Delete
                     </button>
-                    <Link className="btn" to={"/Main"}>
+                    <Link className="onebtn" to={"/Main"}>
                         Home
                     </Link>
                 </div>

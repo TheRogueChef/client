@@ -34,11 +34,13 @@ const Login = (props) => {
                 <br />
                 <form onSubmit={loginHandler}>
                     <label>Email: </label>
+                    <br />
                     <input  type='text' name='email' value={userLogin.email} onChange={changeHandler} style={{ backgroundColor: 'transparent'}} />
                     <br /><br />
                     <label>Password: </label>
+                    <br />
                     <input type='password' name='password' value={userLogin.password} onChange={changeHandler} style={{ backgroundColor: 'transparent'}} />
-                    <br /><br />
+                    <br /><br /><br /><br />
                     <button className='Bbtn'>Login</button>
                     <br /> <br />
                 </form>

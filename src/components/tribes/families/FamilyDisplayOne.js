@@ -37,7 +37,7 @@ const OneFamily = (props) => {
                 <br  />
                 <h3 style={{ fontStyle: 'italic', textShadow: '1px 1px pink' }}>"{family.familyStatement}"</h3>
                 <br /><br />
-                <Link className='btn' to={`/allFamilies`}>Back</Link>
+                <Link className='onebtn' to={`/allFamilies`}>Back</Link>
                 
             </div>
         </div>

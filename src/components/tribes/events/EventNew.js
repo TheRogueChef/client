@@ -33,9 +33,9 @@ const EventForm = (props) => {
             <form onSubmit={submitHandler}>
                 <p className= 'PageTitle'>----- New Event -----</p>
                 <div className= 'ButtonStrip'>
-                    <button className='btn' >Post</button>
-                    <Link className='btn' to={`/allEvents`}>All Events</Link> 
-                    <Link className='btn' to={'/Main'}>Home</Link>
+                    <button className='onebtn' >Post</button>
+                    <Link className='onebtn' to={`/allEvents`}>All Events</Link> 
+                    <Link className='onebtn' to={'/Main'}>Home</Link>
                 </div>
                 <br /><br />
                 <div className= 'BoxLabel'>

@@ -58,23 +58,28 @@ const DisplayAllEvents = (props) => {
             <h1 className='PageTitle'>----- All Events -----</h1>
             <br/>
             <div className='ButtonStrip'>
-                <Link className='btn' to={'/Main'}>Home</Link>
-                <Link className='btn' to={`/newEvent`}>New Event</Link>
+                <Link className='allbtn' to={'/Main'}>Home</Link>
+                <Link className='allbtn' to={`/newEvent`}>New Event</Link>
             </div>  
             {events.map((event, index) => (
                 <div className='allBox' key={index}>
                     <h1>{event.eventTitle}</h1>
                     <h4>{formattedDate} at {event.eventLocation}</h4>
                     <h2 style={{ fontStyle: 'italic'}}>"{event.eventDetails}"</h2>
-                    <Link className='btn' to={`/oneEvent/${event._id}`}>Deets</Link>
+                    <br />
+                    <Link className='allbtn' to={`/oneEvent/${event._id}`}>Deets</Link>
                     <br /><br />
                     <div className='LikeStrip'>
+                        <div className='likeWords'>
                             Likes: {event.likes}
+                        </div>
                             <br />
-                            <button className='btn' onClick={() => handleLike(event._id, index)}>
+                        <div>
+                            <button className='allbtn' onClick={() => handleLike(event._id, index)}>
                                 You Like That?
                             </button>
                         </div>
+                    </div>
                 </div>
             ))}
         </div>

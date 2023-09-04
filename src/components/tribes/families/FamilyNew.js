@@ -34,8 +34,8 @@ const FamilyForm = (props) => {
             <form onSubmit={submitHandler}>
                 <p className="PageTitle">--- Add a Family ---</p>
                 <div className='ButtonStrip'>
-                    <button className='btn' >Create</button>
-                    <Link className='btn' to={'/allFamilies'}>Back</Link>
+                    <button className='onebtn' >Create</button>
+                    <Link className='onebtn' to={'/allFamilies'}>Back</Link>
                 </div>
                 <br />
                 <br />

@@ -1,6 +1,5 @@
 import './components/tribes/style.css';
 import './index.css';
-import 'react-image-gallery/styles/css/image-gallery.css';
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Main from './views/Main';
@@ -20,8 +19,7 @@ import FamilyDisplayAll from './components/tribes/families/FamilyDisplayAll';
 import FamilyDisplayOne from './components/tribes/families/FamilyDisplayOne';
 import FamilyNew from './components/tribes/families/FamilyNew';
 import FamilyUpdate from './components/tribes/families/FamilyUpdate';
-import AllPics from './components/tribes/picPages/AllPics';
-import PicNew from './components/tribes/picPages/PicNew';
+
 
 
 function App() {
@@ -45,8 +43,6 @@ function App() {
           <Route path="/oneFamily/:id" element={<FamilyDisplayOne />} />
           <Route path="/newFamily" element={<FamilyNew />} />
           <Route path="/updateFamily/:id" element={<FamilyUpdate />} />
-          <Route path="/allPics" element={<AllPics />} />
-          <Route path="/newPic" element={<PicNew />} />
         </Routes>
     </div>
   );

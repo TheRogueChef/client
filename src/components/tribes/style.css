@@ -9,33 +9,41 @@
 }
 
 .pinpic {
-    width: 22rem;
-    height: 22rem;
+    width: 20rem;
+    height: 20rem;
     margin-left: 6rem;
     margin-top: 5rem;
 }
 
-.logo {
-    margin-left: 1rem;
-    color: darkred;
-    display: flex;
+.LRLogoBox {
+    display:flex;
 }
 
-.PageTitle {
-    font-size: 10rem;
-    text-shadow: .2rem .2rem pink;
+.LogRegLogo {
+    color: darkred;
+    font-size: 7rem;
+    text-shadow: .25rem .25rem black;
+    margin-left: -5rem;
 }
+
+.LRNoun {
+    display: flex;
+    font-size: 2.5rem;
+    margin-top: 5rem;
+    text-shadow: .25rem .25rem pink;
+}
+
+
 
 
 /*LogReg*/
 .LRTop {
     display: flex;
-    text-shadow: .25rem .25rem pink;
 }
 
 .body {
     text-align: center;
-    font-size: 12rem;
+    font-size: 2rem;
     height: 100%;
     text-shadow: .25rem .25rem pink;
     margin: 1rem;
@@ -55,10 +63,11 @@
     height: 100%;
     background-color: rgba(0, 0, 0, .3);
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-shadow: .1rem .1rem pink;
     margin: 1rem;
     color: black;
+    padding-top: 1rem;
 }
 
 
@@ -80,16 +89,6 @@
     margin-right: auto;
 }
 
-.btn {
-    width: auto;
-    height: 2.25em;
-    background-color: rgb(164, 29, 164);
-    color: whitesmoke;
-    border: .1rem solid black;
-    border-radius: 5%;
-    box-shadow: .2em .2em black;
-    text-shadow: 0 0 transparent;
-}
 
 
 /*MusicPlayer*/
@@ -116,7 +115,7 @@
 
 /*Bored*/
 .BoredBox {
-    font-size: 10rem;
+    font-size: 6rem;
     text-shadow: .2rem .2rem pink;
     margin: 2%;
 }
@@ -146,14 +145,14 @@
     padding: 2.5%;
 }
 
-.Logo{
-    font-size: 8.5rem;
+.DashLogo{
+    font-size: 6rem;
     text-shadow: .25rem .25rem pink;
 }
 
 .DashR {
-    padding-left: 2.5em;
-    font-size: 2.5rem;
+    padding-left: 3.25em;
+    font-size: 2rem;
     text-shadow: .1rem .1rem pink;
 }
 
@@ -183,9 +182,14 @@
 }
 
 .LikeStrip {
-    font-size: 3rem;
     display: flex;
     justify-content: space-evenly;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+.likeWords {
+    font-size: 2rem;
     text-shadow: .2rem .2rem pink;
 }
 
@@ -199,22 +203,101 @@
     height: auto;
     padding-bottom: 1%;
     text-shadow: .1em .1em pink;
+    padding-top: 1%;
+}
+
+.allbtn {
+    width: auto;
+    height: auto;
+    background-color:rgb(164, 29, 164) ;
+    color: white;
+    border: .1rem solid black;
+    border-radius: 25%;
+    box-shadow: .2em .2em black;
+    text-shadow: none;
+    text-decoration: none;
+    padding: 1%;
+}
+
+/*E&ERecent*/
+.recentShell{
+    border: .1rem solid black;
+    border-radius: 2%;
+    background-color: rgba(0,0,0,.2);
+}
+
+.recentTitleBar {
+    display: flex;
+    margin: 5%;
+}
+
+.recentTitle {
+    text-align: center;
+    font-weight: bold;
+    padding-left: 10%;
+    padding-right: 5%;
+    font-size: 3rem;
+    text-shadow: .1em .1em pink;
+}
+
+.recentPostTitle {
+    text-align: center;
+    font-weight: bold;
+    padding-left: 6%;
+    padding-right: 5%;
+    font-size: 3rem;
+    text-shadow: .1em .1em pink;
+}
+
+.recentInfo {
+    text-align: center;
+    text-shadow: .1em .1em pink;
+}
+
+.rbtn {
+    width: auto;
+    height: 2.25em;
+    background-color:rgb(164, 29, 164) ;
+    color: white;
+    border: .1rem solid black;
+    border-radius: 25%;
+    box-shadow: .2em .2em black;
+    text-shadow: none;
+    text-decoration: none;
+    padding: 1%;
 }
 
 
 /* OnePageDisplay*/
 .oneBodyBox {
-    background-image: 'transparent';
     width: 100%;
     height: 100vh;
     text-align: center;
     align-content: center;
 }
 
+.onebtn {
+    width: auto;
+    height: auto;
+    background-color:rgb(164, 29, 164) ;
+    color: white;
+    border: .1rem solid black;
+    border-radius: 25%;
+    box-shadow: .2em .2em black;
+    text-shadow: none;
+    text-decoration: none;
+    padding: 1%;
+}
+
 .ButtonStrip {
     display:flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.PageTitle {
+    font-size: 6rem;
+    text-shadow: .2rem .2rem pink;
 }
 
 .TitleBox {
@@ -235,13 +318,13 @@
 /*NewEntry & Event*/
 .EBodyBox {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: grid;
     text-align: center;
 }
 
 .BoxLabel {
-    font-size: 4rem;
+    font-size: 2.5rem;
     text-shadow: .2rem .2rem pink;
 }
 
@@ -261,37 +344,66 @@
 }
 
 
-/* allPics*/
-.PBodyBox {
+/*Families*/
+.famBodyBox {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-content: center;
+    padding-bottom: 10%;
+}
+
+
+.famTitleBar {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2%;
+}
+
+.famAllBox {
     border: .1rem solid black;
-    border-radius: 2%;
+    border-radius: 1%;
+    background-color: rgba(0, 0, 0, .2);
+    margin: 2%;
     text-align: center;
     width: auto;
     height: auto;
-    background-color: rgba(0, 0, 0, .2);
-    padding-top: 2%;
+    padding-bottom: 1%;
+    text-shadow: .1em .1em pink;
+    padding-top: 1.5%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.famButtons {
+    margin: 2%;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding-bottom: 1%;
+    text-shadow: .1em .1em pink;
+    display: flex;
+    justify-content: space-around;
 }
 
-.Gallery {
-    margin: 1%;
+.famInfo {
+    text-align: center;
+    text-shadow: .1em .1em pink;
+}
+
+.fambtn {
+    width: auto;
+    height: auto;
+    background-color:rgb(164, 29, 164) ;
+    color: white;
     border: .1rem solid black;
-    border-radius: 2%;
+    border-radius: 25%;
+    box-shadow: .2em .2em black;
+    text-shadow: none;
+    text-decoration: none;
+    padding: 2%;
+
 }
 
-.PicTitle {
-    font-size: 6rem;
-    text-shadow: .2rem .2rem pink;
-}
-
-.original-image {
-    height: 50rem;
-    width: 50rem;
-}
-
-.thumbnail-image {
-    height: 5rem;
-    width: 5rem;
-}
 
 
 /*ChatBox*/
@@ -324,4 +436,5 @@
 .NameBox {
     background-color: transparent;
     border-radius: 5%;
+    color: white;
 }

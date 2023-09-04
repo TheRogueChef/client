@@ -2,7 +2,7 @@
 const MusicPlayer = () => {
     const openSpotifyPlayerInNewWindow = () => {
     const spotifyPlayerUrl =
-        "https://open.spotify.com/embed/playlist/5NbIfVQKtuFcGdeHmdaQj1?utm_source=generator";
+        "https://open.spotify.com/embed/playlist/5NbIfVQKtuFcGdeHmdaQj1?";
     window.open(spotifyPlayerUrl );
 };
 
@@ -11,7 +11,7 @@ return (
     <iframe
         title="OnionMix"
         style={{ borderRadius: "1%" }}
-        src="https://open.spotify.com/embed/playlist/5NbIfVQKtuFcGdeHmdaQj1?utm_source=generator"
+        src="https://open.spotify.com/embed/playlist/5NbIfVQKtuFcGdeHmdaQj1?"
         width="100%"
         height="352"
         frameBorder="0"

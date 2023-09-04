@@ -69,7 +69,7 @@ const ChatBox = () => {
                             placeholder="Your Name"
                             className='NameBox'
                         />
-                        <button className='btn' type="submit" >Post</button>
+                        <button className='onebtn' type="submit" >Post</button>
                     </div>
                 </form>
             </div>

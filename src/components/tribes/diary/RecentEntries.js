@@ -17,11 +17,11 @@ const RecentEntries = () => {
     }, []);
 
     return (
-        <div style={{ border: '1px black solid', borderRadius: '2%', backgroundColor: 'rgba(0,0,0,.2)' }}>
-            <div style={{ display: 'flex', margin: '10px' }}>
-                <Link className='btn' to={`/allEntries`}>Our Diary</Link>
-                <h4 style={{ textAlign: 'center', fontWeight: 'bold', paddingLeft: '20px', paddingRight: '30px', fontSize: '50px', textShadow: '2px 2px pink' }}>Latest Posts</h4>
-                <Link className='btn' to={`/newEntry`}>New Entry</Link>
+        <div className='recentShell'>
+            <div className='recentTitleBar'>
+                <Link className='rbtn' to={`/allEntries`}>Our Diary</Link>
+                <h4 className='recentPostTitle'>Latest Posts</h4>
+                <Link className='rbtn' to={`/newEntry`}>New Entry</Link>
             </div>
             {entries.map((entry, index) => {
                 const formattedDate = new Date(entry.entryDate).toLocaleDateString('en-US', {
@@ -31,12 +31,12 @@ const RecentEntries = () => {
                 });
 
                 return (
-                    <div key={index} style={{ textAlign: 'center' }}>
-                        <h3 style={{ textShadow: '1px 1px pink' }}>{entry.entryTitle}</h3>
-                        <h4 style={{ textShadow: '1px 1px pink' }} >{formattedDate} by {entry.entryAuthor}</h4>
-                        <Link className='btn' to={`/oneEntry/${entry._id}`}>Deets</Link>
+                    <div key={index} className='recentInfo'>
+                        <h3>{entry.entryTitle}</h3>
+                        <h4>{formattedDate} by {entry.entryAuthor}</h4>
+                        <Link className='rbtn' to={`/oneEntry/${entry._id}`}>Deets</Link>
                         <br /><br />
-                        <p style={{ textShadow: '1px 1px pink' }}>***************************************************************</p>
+                        <p>***************************************************************</p>
 
                     </div>
                 );

@@ -52,8 +52,8 @@ const DisplayAllEntries = (props) => {
             <p className= 'PageTitle'>----- Our Tribes Diary -----</p>
             <br />
             <div className= 'ButtonStrip'>
-                <Link className='btn' target='blank' to={'/Main'}>Home</Link>
-                <Link className='btn' to={`/newEntry`}>New Entry</Link>
+                <Link className='allbtn' target='blank' to={'/Main'}>Home</Link>
+                <Link className='allbtn' to={`/newEntry`}>New Entry</Link>
             </div>
             <br /><br />
             {entries.map((entry, index) => {
@@ -78,14 +78,16 @@ const DisplayAllEntries = (props) => {
                         </h4>
                         <h2 style={{ fontStyle: 'italic' }}>"{entry.entry}"</h2>
                         <br /><br />
-                        <Link className='btn' to={`/oneEntry/${entry._id}`}>
+                        <Link className='allbtn' to={`/oneEntry/${entry._id}`}>
                             Deets
                         </Link>
                         <br /><br />
                         <div className='LikeStrip'>
+                            <div className='likeWords'>
                             Likes: {entry.likes}
+                            </div>
                             <br />
-                            <button className='btn' onClick={() => handleLike(entry._id, index)}>
+                            <button className='allbtn' onClick={() => handleLike(entry._id, index)}>
                                 You Like That?
                             </button>
                         </div>

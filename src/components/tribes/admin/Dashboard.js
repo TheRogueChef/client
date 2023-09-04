@@ -16,13 +16,12 @@ const Dashboard = (props) => {
     }
     return (
         <div className='Dashboard'>
-            <div className='Logo'>
+            <div className='DashLogo'>
                 <p>My</p>
                 <p style={{ marginTop: '-.4em' }}>Tribe</p>
                 <p style={{ marginTop: '-.5em' }}>Tracker</p>
             </div>
             <div className='DashR'>
-
                 <div className='DashTab'>
                     <p>Families</p>
                     <Link className='Dbtn' target='blank' to={'/allFamilies'}></Link>

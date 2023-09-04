@@ -13,21 +13,26 @@ const LogReg = (props) => {
         <div>
             <br />
             <div className='LRTop'>
-                <div className='logo'>
+                <div className='LRLogoBox'>
                     <Image className='pinpic' src={pin} alt="..." />
-                    <h1 style={{ fontSize: '10rem', textShadow: '.25rem .25rem black'}}>My Tribe Tracker</h1>
+                    <div className='LogRegLogo'>
+                        <p>My</p>
+                        <p style={{marginTop: '-3rem'}}>Tribe</p> 
+                        <p style={{marginTop: '-4rem'}}>Tracker</p>
+                    </div>
                 </div>
-                <h2 style={{ marginTop: '6rem', fontSize: '6rem'}}>Tribe</h2>
-                <br /><br />
-                <h3 style={{ marginTop: '6.75rem', fontSize: '5rem'}}>/noun/</h3>
-                <h4 style={{ marginTop: '7.5rem', marginRight: '.5rem', fontSize: '4rem'}}>
-                'a social division in a traditional society consisting of families or communities linked by social,
-                economic, religious, or blood ties, with a common culture and dialect.'</h4>
+                <div className='LRNoun'>
+                    <p>Tribe</p>
+                    <br /><br />
+                    <p>/noun/</p>
+                    <p>
+                    'a social division in a traditional society consisting of families or communities linked by social,
+                    economic, religious, or blood ties, with a common culture and dialect.'</p>
+                </div>
             </div>
             <br /><br />
         <div className='body'>
-            <h1 >Sign in or Sign up,</h1>
-            <h1 > your friends are waiting...</h1>
+            <p>Sign in or Sign up, your friends are waiting...</p>
         </div>
         <div className='LRBoxes'>
             <br />
